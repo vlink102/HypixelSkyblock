@@ -1,5 +1,8 @@
 package me.vlink102.hypixelskyblock.potions;
 
+import javafx.application.Platform;
+import org.bukkit.entity.Player;
+
 public class SBPotion {
     private final long ID;
     private final String name;
@@ -25,5 +28,13 @@ public class SBPotion {
 
     public long getID() {
         return ID;
+    }
+
+    public void affect(Player player) {
+
+    }
+
+    public void clean(Player player) {
+
     }
 }

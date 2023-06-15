@@ -1,5 +1,7 @@
 package me.vlink102.hypixelskyblock.potions;
 
+import org.bukkit.entity.Player;
+
 import java.util.Arrays;
 import java.util.List;
 
@@ -12,5 +14,10 @@ public class Absorption extends SBPotion{
 
     public double getAbsorptionAmount() {
         return ABSORPTION_HEALTH.get(getLevel() - 1);
+    }
+
+    @Override
+    public void affect(Player player) {
+
     }
 }
