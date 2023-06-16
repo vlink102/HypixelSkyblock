@@ -13,7 +13,7 @@ public final class HypixelSkyblock extends JavaPlugin {
     @Override
     public void onEnable() {
         System.out.println("Loading Lowpixel Groundblock...");
-        this.playerUtils = new SBPlayerManager();
+        this.playerUtils = new SBPlayerManager(this);
         Bukkit.getServer().getPluginManager().registerEvents(playerUtils, this);
         for (Player player : Bukkit.getOnlinePlayers()) {
             playerUtils.addPlayer(player);

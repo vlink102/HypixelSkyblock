@@ -1,6 +1,7 @@
 package me.vlink102.hypixelskyblock.player;
 
-import me.vlink102.hypixelskyblock.util.ActionBarAPI;
+import de.Herbystar.TTA.TTA_Methods;
+import me.vlink102.hypixelskyblock.HypixelSkyblock;
 import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
 import org.bukkit.entity.Player;
@@ -15,8 +16,19 @@ import java.util.UUID;
 public class SBPlayerManager implements Listener {
     private final HashMap<UUID, SBPlayer> PLAYER_MAP;
 
-    public SBPlayerManager() {
+    public SBPlayerManager(HypixelSkyblock plugin) {
         this.PLAYER_MAP = new HashMap<>();
+        Bukkit.getScheduler().scheduleSyncRepeatingTask(plugin, this::updatePlayers, 0, 1);
+    }
+
+    public void updatePlayers() {
+        for (Player player : Bukkit.getOnlinePlayers()) {
+            if (PLAYER_MAP.containsKey(player.getUniqueId())) {
+                updatePlayer(PLAYER_MAP.get(player.getUniqueId()));
+            } else {
+                System.out.println("Tried to update unregistered player: " + player.getUniqueId());
+            }
+        }
     }
 
     public HashMap<UUID, SBPlayer> getPlayerMap() {
@@ -89,17 +101,17 @@ public class SBPlayerManager implements Listener {
     }
 
     public void sendActionBar(SBPlayer player, String text) {
-        ActionBarAPI.sendActionBar(player.getPlayerBind(), ChatColor.translateAlternateColorCodes('&', text));
+        TTA_Methods.sendActionBar(player.getPlayerBind(), ChatColor.translateAlternateColorCodes('&', text));
     }
 
     public void manageActionBar(SBPlayer player) {
         StringJoiner actionBarContent = new StringJoiner("      ");
-        actionBarContent.add("&c" + player.getHealth().toString() + "/" + player.getMaxHealth().toString() + "❤");
+        actionBarContent.add("&c" + player.getHealth().getRoundedValue() + "/" + player.getMaxHealth().getRoundedValue() + "❤");
         if (player.getDefense().getValue() != 0) {
-            actionBarContent.add("&a" + player.getDefense().toString() + "❈ Defense");
+            actionBarContent.add("&a" + player.getDefense().getRoundedValue() + "❈ Defense");
             // TODO Location change
         }
-        actionBarContent.add("&b" + player.getMana().toString() + "/" + player.getIntelligence().toString() + "✎ Mana");
+        actionBarContent.add("&b" + player.getMana().getRoundedValue() + "/" + player.getIntelligence().getRoundedValue() + "✎ Mana");
         sendActionBar(player, actionBarContent.toString());
     }
 
