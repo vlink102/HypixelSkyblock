@@ -8,7 +8,8 @@ import org.bukkit.Material;
 import java.util.List;
 
 public class UndeadSword extends SBItem {
-    public UndeadSword(String itemID, String itemName, Material material, boolean stackable, int hpb, int fpb, boolean aow, boolean recomb, ItemRarity rarity, List<SBEnchantment> sbEnchantments, Statistic... statistics) {
-        super(itemID, itemName, material, stackable, hpb, fpb, aow, recomb, rarity, sbEnchantments, statistics);
+
+    public UndeadSword(String itemID, String itemName, Material material, boolean soulBound, boolean reforgable, boolean stackable, int hpb, int fpb, boolean aow, boolean aop, boolean recomb, ItemType itemType, ItemRarity rarity, List<SBEnchantment> sbEnchantments, Statistic... statistics) {
+        super(itemID, itemName, material, soulBound, reforgable, stackable, hpb, fpb, aow, aop, recomb, itemType, rarity, sbEnchantments, statistics);
     }
 }

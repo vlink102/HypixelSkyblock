@@ -1,103 +1,118 @@
 package me.vlink102.hypixelskyblock.player;
 
 import lombok.Getter;
+import lombok.Setter;
+import me.vlink102.hypixelskyblock.items.SBItem;
 import me.vlink102.hypixelskyblock.util.Statistic;
 import org.bukkit.entity.Player;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class SBPlayer {
     @Getter private final Player playerBind;
 
-    @Getter private final Statistic maxHealth;
-    @Getter private final Statistic defense;
-    @Getter private final Statistic trueDefense;
-    @Getter private final Statistic strength;
-    @Getter private final Statistic intelligence;
+    @Getter private final Statistic.PlayerStatistic maxHealth;
+    @Getter private final Statistic.PlayerStatistic defense;
+    @Getter private final Statistic.PlayerStatistic trueDefense;
+    @Getter private final Statistic.PlayerStatistic strength;
+    @Getter private final Statistic.PlayerStatistic intelligence;
 
-    @Getter private final Statistic critDamage;
-    @Getter private final Statistic critChance;
+    @Getter private final Statistic.PlayerStatistic critDamage;
+    @Getter private final Statistic.PlayerStatistic critChance;
 
-    @Getter private final Statistic ferocity;
-    @Getter private final Statistic bonusAttackSpeed;
+    @Getter private final Statistic.PlayerStatistic ferocity;
+    @Getter private final Statistic.PlayerStatistic bonusAttackSpeed;
 
-    @Getter private final Statistic abilityDamage;
+    @Getter private final Statistic.PlayerStatistic abilityDamage;
 
-    @Getter private final Statistic healthRegeneration;
-    @Getter private final Statistic vitality;
-    @Getter private final Statistic mending;
+    @Getter private final Statistic.PlayerStatistic healthRegeneration;
+    @Getter private final Statistic.PlayerStatistic vitality;
+    @Getter private final Statistic.PlayerStatistic mending;
 
-    @Getter private final Statistic speed;
-    @Getter private final Statistic seaCreatureChance;
-    @Getter private final Statistic magicFind;
-    @Getter private final Statistic petLuck;
-    @Getter private final Statistic fishingSpeed;
+    @Getter private final Statistic.PlayerStatistic speed;
+    @Getter private final Statistic.PlayerStatistic seaCreatureChance;
+    @Getter private final Statistic.PlayerStatistic magicFind;
+    @Getter private final Statistic.PlayerStatistic petLuck;
+    @Getter private final Statistic.PlayerStatistic fishingSpeed;
 
-    @Getter private final Statistic combatWisdom;
-    @Getter private final Statistic miningWisdom;
-    @Getter private final Statistic farmingWisdom;
-    @Getter private final Statistic foragingWisdom;
-    @Getter private final Statistic fishingWisdom;
-    @Getter private final Statistic enchantingWisdom;
-    @Getter private final Statistic alchemyWisdom;
-    @Getter private final Statistic carpentryWisdom;
-    @Getter private final Statistic runecraftingWisdom;
-    @Getter private final Statistic socialWisdom;
+    @Getter private final Statistic.PlayerStatistic combatWisdom;
+    @Getter private final Statistic.PlayerStatistic miningWisdom;
+    @Getter private final Statistic.PlayerStatistic farmingWisdom;
+    @Getter private final Statistic.PlayerStatistic foragingWisdom;
+    @Getter private final Statistic.PlayerStatistic fishingWisdom;
+    @Getter private final Statistic.PlayerStatistic enchantingWisdom;
+    @Getter private final Statistic.PlayerStatistic alchemyWisdom;
+    @Getter private final Statistic.PlayerStatistic carpentryWisdom;
+    @Getter private final Statistic.PlayerStatistic runecraftingWisdom;
+    @Getter private final Statistic.PlayerStatistic socialWisdom;
 
-    @Getter private final Statistic miningSpeed;
-    @Getter private final Statistic breakingPower;
-    @Getter private final Statistic pristine;
-    @Getter private final Statistic foragingFortune;
-    @Getter private final Statistic farmingFortune;
-    @Getter private final Statistic miningFortune;
+    @Getter private final Statistic.PlayerStatistic miningSpeed;
+    @Getter private final Statistic.PlayerStatistic breakingPower;
+    @Getter private final Statistic.PlayerStatistic pristine;
+    @Getter private final Statistic.PlayerStatistic foragingFortune;
+    @Getter private final Statistic.PlayerStatistic farmingFortune;
+    @Getter private final Statistic.PlayerStatistic miningFortune;
 
-    @Getter private final Statistic fear;
-    @Getter private final Statistic heat;
-    @Getter private final Statistic absorption;
-    @Getter private final Statistic mana;
-    @Getter private final Statistic health;
+    @Getter private final Statistic.PlayerStatistic fear;
+    @Getter private final Statistic.PlayerStatistic heat;
+    @Getter private final Statistic.PlayerStatistic absorption;
+    @Getter private final Statistic.PlayerStatistic mana;
+    @Getter private final Statistic.PlayerStatistic health;
+
+    @Getter private final List<SBItem> inventory;
 
     public SBPlayer(Player playerBind) {
         this.playerBind = playerBind;
 
-        this.maxHealth = new Statistic(1, Statistic.StatisticType.VALUE, 100);
-        this.defense = new Statistic(2, Statistic.StatisticType.VALUE, 0);
-        this.strength = new Statistic(3, Statistic.StatisticType.VALUE, 0);
-        this.intelligence = new Statistic(4, Statistic.StatisticType.VALUE, 100);
-        this.critDamage = new Statistic(5, Statistic.StatisticType.PERCENTAGE, 50);
-        this.critChance = new Statistic(6, Statistic.StatisticType.PERCENTAGE, 30, 100);
-        this.ferocity = new Statistic(7, Statistic.StatisticType.VALUE, 0, 500);
-        this.bonusAttackSpeed = new Statistic(8, Statistic.StatisticType.VALUE, 0, 100);
-        this.abilityDamage = new Statistic(9, Statistic.StatisticType.VALUE, 0);
-        this.healthRegeneration = new Statistic(10, Statistic.StatisticType.VALUE, 100);
-        this.vitality = new Statistic(11, Statistic.StatisticType.VALUE, 100);
-        this.mending = new Statistic(12, Statistic.StatisticType.VALUE, 100);
-        this.trueDefense = new Statistic(13, Statistic.StatisticType.VALUE, 0);
-        this.speed = new Statistic(14, Statistic.StatisticType.PERCENTAGE, 100, 400); // BLACK CAT + YOUNG DRAG 500% MAX
-        this.seaCreatureChance = new Statistic(15, Statistic.StatisticType.PERCENTAGE, 20, 100);
-        this.magicFind = new Statistic(16, Statistic.StatisticType.PERCENTAGE, 0);
-        this.petLuck = new Statistic(17, Statistic.StatisticType.VALUE, 0);
-        this.fishingSpeed = new Statistic(18, Statistic.StatisticType.VALUE, 0, 300); // CRIMSON ISLE 350 MAX
-        this.combatWisdom = new Statistic(19, Statistic.StatisticType.VALUE, 0);
-        this.miningWisdom = new Statistic(20, Statistic.StatisticType.VALUE, 0);
-        this.farmingWisdom = new Statistic(21, Statistic.StatisticType.VALUE, 0);
-        this.foragingWisdom = new Statistic(22, Statistic.StatisticType.VALUE, 0);
-        this.fishingWisdom = new Statistic(23, Statistic.StatisticType.VALUE, 0);
-        this.enchantingWisdom = new Statistic(24, Statistic.StatisticType.VALUE, 0);
-        this.alchemyWisdom = new Statistic(25, Statistic.StatisticType.VALUE, 0);
-        this.carpentryWisdom = new Statistic(26, Statistic.StatisticType.VALUE, 0);
-        this.runecraftingWisdom = new Statistic(27, Statistic.StatisticType.VALUE, 0);
-        this.socialWisdom = new Statistic(28, Statistic.StatisticType.VALUE, 0);
-        this.miningSpeed = new Statistic(29, Statistic.StatisticType.VALUE, 0);
-        this.breakingPower = new Statistic(30, Statistic.StatisticType.VALUE, 0, 10);
-        this.pristine = new Statistic(31, Statistic.StatisticType.VALUE, 0, 18.63);
-        this.foragingFortune = new Statistic(32, Statistic.StatisticType.VALUE, 0);
-        this.farmingFortune = new Statistic(33, Statistic.StatisticType.VALUE, 0);
-        this.miningFortune = new Statistic(34, Statistic.StatisticType.VALUE, 0);
-        this.mana = new Statistic(35, Statistic.StatisticType.VALUE, 100);
-        this.fear = new Statistic(36, Statistic.StatisticType.BOOLEAN, 0); // FALSE
-        this.heat = new Statistic(37, Statistic.StatisticType.VALUE, 0);
-        this.absorption = new Statistic(38, Statistic.StatisticType.VALUE, 0);
-        this.health = new Statistic(39, Statistic.StatisticType.VALUE, 100);
+        this.inventory = new ArrayList<>();
+
+        this.maxHealth = Statistic.Statistics.MAX_HEALTH.getPlayerStatistic();
+        this.defense = Statistic.Statistics.DEFENSE.getPlayerStatistic();
+        this.strength = Statistic.Statistics.STRENGTH.getPlayerStatistic();
+        this.intelligence = Statistic.Statistics.INTELLIGENCE.getPlayerStatistic();
+        this.critDamage = Statistic.Statistics.CRIT_DAMAGE.getPlayerStatistic();
+        this.critChance = Statistic.Statistics.CRIT_CHANCE.getPlayerStatistic();
+        this.ferocity = Statistic.Statistics.FEROCITY.getPlayerStatistic();
+        this.bonusAttackSpeed = Statistic.Statistics.BONUS_ATTACK_SPEED.getPlayerStatistic();
+        this.abilityDamage = Statistic.Statistics.ABILITY_DAMAGE.getPlayerStatistic();
+        this.healthRegeneration = Statistic.Statistics.HEALTH_REGENERATION.getPlayerStatistic();
+        this.vitality = Statistic.Statistics.VITALITY.getPlayerStatistic();
+        this.mending = Statistic.Statistics.MENDING.getPlayerStatistic();
+        this.trueDefense = Statistic.Statistics.TRUE_DEFENSE.getPlayerStatistic();
+        this.speed = Statistic.Statistics.SPEED.getPlayerStatistic();
+        this.seaCreatureChance = Statistic.Statistics.SEA_CREATURE_CHANCE.getPlayerStatistic();
+        this.magicFind = Statistic.Statistics.MAGIC_FIND.getPlayerStatistic();
+        this.petLuck = Statistic.Statistics.PET_LUCK.getPlayerStatistic();
+        this.fishingSpeed = Statistic.Statistics.FISHING_SPEED.getPlayerStatistic();
+        this.combatWisdom = Statistic.Statistics.COMBAT_WISDOM.getPlayerStatistic();
+        this.miningWisdom = Statistic.Statistics.MINING_WISDOM.getPlayerStatistic();
+        this.farmingWisdom = Statistic.Statistics.FARMING_WISDOM.getPlayerStatistic();
+        this.foragingWisdom = Statistic.Statistics.FORAGING_WISDOM.getPlayerStatistic();
+        this.fishingWisdom = Statistic.Statistics.FISHING_WISDOM.getPlayerStatistic();
+        this.enchantingWisdom = Statistic.Statistics.ENCHANTING_WISDOM.getPlayerStatistic();
+        this.alchemyWisdom = Statistic.Statistics.ALCHEMY_WISDOM.getPlayerStatistic();
+        this.carpentryWisdom = Statistic.Statistics.CARPENTRY_WISDOM.getPlayerStatistic();
+        this.runecraftingWisdom = Statistic.Statistics.RUNECRAFTING_WISDOM.getPlayerStatistic();
+        this.socialWisdom = Statistic.Statistics.SOCIAL_WISDOM.getPlayerStatistic();
+        this.miningSpeed = Statistic.Statistics.MINING_SPEED.getPlayerStatistic();
+        this.breakingPower = Statistic.Statistics.BREAKING_POWER.getPlayerStatistic();
+        this.pristine = Statistic.Statistics.PRISTINE.getPlayerStatistic();
+        this.foragingFortune = Statistic.Statistics.FORAGING_FORTUNE.getPlayerStatistic();
+        this.farmingFortune = Statistic.Statistics.FARMING_FORTUNE.getPlayerStatistic();
+        this.miningFortune = Statistic.Statistics.MINING_FORTUNE.getPlayerStatistic();
+        this.mana = Statistic.Statistics.MANA.getPlayerStatistic();
+        this.fear = Statistic.Statistics.FEAR.getPlayerStatistic();
+        this.heat = Statistic.Statistics.HEAT.getPlayerStatistic();
+        this.absorption = Statistic.Statistics.ABSORPTION.getPlayerStatistic();
+        this.health = Statistic.Statistics.HEALTH.getPlayerStatistic();
     }
 
+    public void setHealth(double value) {
+        health.setValue(value);
+    }
 
+    public void setMaxHealth(double value) {
+        maxHealth.setValue(value);
+    }
 }

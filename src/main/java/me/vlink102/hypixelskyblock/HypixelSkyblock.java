@@ -1,6 +1,7 @@
 package me.vlink102.hypixelskyblock;
 
 import lombok.Getter;
+import me.vlink102.hypixelskyblock.listeners.Damage;
 import me.vlink102.hypixelskyblock.player.SBPlayerManager;
 import org.bukkit.Bukkit;
 import org.bukkit.entity.Player;
@@ -14,6 +15,7 @@ public final class HypixelSkyblock extends JavaPlugin {
     public void onEnable() {
         System.out.println("Loading Lowpixel Groundblock...");
         this.playerUtils = new SBPlayerManager(this);
+        Bukkit.getServer().getPluginManager().registerEvents(new Damage(this), this);
         Bukkit.getServer().getPluginManager().registerEvents(playerUtils, this);
         for (Player player : Bukkit.getOnlinePlayers()) {
             playerUtils.addPlayer(player);
