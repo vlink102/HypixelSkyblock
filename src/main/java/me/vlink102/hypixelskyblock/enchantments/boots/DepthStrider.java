@@ -20,6 +20,10 @@ public class DepthStrider extends SBEnchantment {
         return getLevel() * Statistic.fromPercentage(100d/3d);
     }
 
+    public Integer[] applyCosts = new Integer[] {0,18,27};
+    public Integer[] rarities = new Integer[] {1,1,1};
+    public double bookshelfPower = 4;
+
     @Override
     public List<SBItem.ItemType> appliedTo() {
         List<SBItem.ItemType> itemTypes = new ArrayList<>();
@@ -31,27 +35,15 @@ public class DepthStrider extends SBEnchantment {
     public List<String> getDescription() {
         List<String> description = new ArrayList<>();
         description.add(ChatColor.translateAlternateColorCodes('&', "&7Reduces how much you are slowed"));
-        description.add(ChatColor.translateAlternateColorCodes('&', "&7in the water by &a" + getWaterSpeedReductionModifier() + "%&7."));
+        description.add(ChatColor.translateAlternateColorCodes('&', "&7in the water by &a" + Statistic.toPercentage((int) getWaterSpeedReductionModifier()) + "%&7."));
         description.add("");
+        if (applyCosts[getLevel() - 1] > 0) {
+            description.add(ChatColor.translateAlternateColorCodes('&', "&7Apply Cost: &3" + applyCosts[getLevel() - 1] + " Exp Levels"));
+            description.add("");
+        }
         description.add(ChatColor.translateAlternateColorCodes('&', "&7Use this on an item in an Anvil"));
         description.add(ChatColor.translateAlternateColorCodes('&', "&7to apply it."));
         description.add("");
-        description.add(ChatColor.translateAlternateColorCodes('&', "&6Source:"));
-        description.add(ChatColor.translateAlternateColorCodes('&', "&aI-III: &7Enchantment Table,"));
-        description.add(ChatColor.translateAlternateColorCodes('&', "&7Pufferfish Collection"));
-        description.add("");
-        description.add(ChatColor.translateAlternateColorCodes('&', "&6Applied To:"));
-        for (SBItem.ItemType itemType : appliedTo()) {
-            description.add(ChatColor.translateAlternateColorCodes('&', "&7- &f" + WordUtils.capitalizeFully(itemType.toString())));
-        }
-        if (getConflictingEnchantments().size() != 0) {
-            description.add("");
-            description.add(ChatColor.translateAlternateColorCodes('&', "Conflicts:"));
-            for (Long conflictingEnchantment : getConflictingEnchantments()) {
-                SBEnchantment enchantment = SBEnchantment.getEnchantByID(conflictingEnchantment, 1);
-                description.add(ChatColor.translateAlternateColorCodes('&', "&7- &c" + enchantment.getDisplayName()));
-            }
-        }
         return description;
     }
 }

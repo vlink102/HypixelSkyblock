@@ -104,6 +104,7 @@ public class SBItem {
     public enum ItemType {
         POWER_STONE,
         SWORD,
+        BRACELET,
         BOOTS,
         LEGGINGS,
         CHESTPLATE,
@@ -483,6 +484,7 @@ public class SBItem {
         }
         if (nbtType == Material.BEDROCK) {
             lore.add(ChatColor.translateAlternateColorCodes('&', "&cI guess you have this now."));
+            lore.add("");
         }
 
 
