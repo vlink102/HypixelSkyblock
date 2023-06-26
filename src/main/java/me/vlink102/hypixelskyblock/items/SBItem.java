@@ -15,6 +15,7 @@ import me.vlink102.hypixelskyblock.enchantments.sword.*;
 import me.vlink102.hypixelskyblock.enchantments.tools.Efficiency;
 import me.vlink102.hypixelskyblock.enchantments.tools.Fortune;
 import me.vlink102.hypixelskyblock.enchantments.tools.SilkTouch;
+import me.vlink102.hypixelskyblock.util.SBUtils;
 import me.vlink102.hypixelskyblock.util.Statistic;
 import org.apache.commons.lang.WordUtils;
 import org.bukkit.ChatColor;
@@ -317,7 +318,8 @@ public class SBItem {
         }
         addArmorStats(itemStats, sbItem.getType());
 
-        String material = String.valueOf(sbItem.getType());
+        item.setString("item_type", "");
+        String material = SBUtils.getItemName(sbItem);
         if (material.endsWith("SWORD")) {
             item.setString("item_type", "SWORD");
         }
@@ -371,7 +373,7 @@ public class SBItem {
         item.setInteger("HideAttributes", 4);
 
         NBTCompound disp = item.addCompound("display");
-        String rawName = capitalise(String.valueOf(sbItem.getType()));
+        String rawName = capitalise(SBUtils.getItemName(sbItem));
         if (rawName.equalsIgnoreCase("ARROW")) {
             rawName = "Flint Arrow";
         }
@@ -380,11 +382,34 @@ public class SBItem {
         }
         rawName = rawName.replaceAll("Spade", "Shovel");
         rawName = rawName.replaceAll("Barding", "Horse Armor");
-        disp.setString("Name", ChatColor.translateAlternateColorCodes('&', ItemRarity.getById(item.getInteger("rarity")).getColorFull() + rawName));
+        if (sbItem.getType() == Material.ENCHANTED_BOOK) {
+            disp.setString("Name", ChatColor.translateAlternateColorCodes('&', getBookRarity(item).getColorFull() + rawName));
+        } else {
+            disp.setString("Name", ChatColor.translateAlternateColorCodes('&', ItemRarity.getById(item.getInteger("rarity")).getColorFull() + rawName));
+        }
         List<String> l = disp.getStringList("Lore");
         l.addAll(generateLore(item));
 
         return item.getItem();
+    }
+
+    public static ItemRarity getBookRarity(NBTItem nbtItem) {
+        int tier = 1;
+        try {
+            JSONObject enchants = (JSONObject) new JSONParser().parse(nbtItem.getString("sb_enchantments"));
+
+            for (Object o : enchants.keySet()) {
+                int id = Integer.parseInt((String) o);
+                SBEnchantment statistic = SBEnchantment.getEnchantByID(id, ((Long) enchants.get(o)).intValue());
+
+                tier = Math.max(tier, statistic.getRarities()[statistic.getLevel() - 1]);
+            }
+        } catch (ParseException e) {
+            throw new RuntimeException(e);
+        }
+
+        nbtItem.setInteger("rarity", tier);
+        return ItemRarity.getById(tier);
     }
 
     public static String capitalise(String string) {
@@ -487,7 +512,6 @@ public class SBItem {
             lore.add("");
         }
 
-
         try {
             JSONObject stats = (JSONObject) new JSONParser().parse(nbtItem.getString("sb_base_statistics"));
             for (Object o : stats.keySet()) {
@@ -507,14 +531,27 @@ public class SBItem {
             throw new RuntimeException(e);
         }
 
+
         try {
             JSONObject enchants = (JSONObject) new JSONParser().parse(nbtItem.getString("sb_enchantments"));
+            int size = enchants.keySet().size();
             for (Object o : enchants.keySet()) {
                 int id = Integer.parseInt((String) o);
                 SBEnchantment statistic = SBEnchantment.getEnchantByID(id, ((Long) enchants.get(o)).intValue());
+
                 lore.add(ChatColor.translateAlternateColorCodes('&', "&9" + statistic.getDisplayName() + " " + toRomanNumerals(statistic.getLevel())));
             }
-            if (enchants.keySet().size() != 0) {
+            if (size < 7) {
+                lore.add("");
+                for (Object o : enchants.keySet()) {
+                    int id = Integer.parseInt((String) o);
+                    SBEnchantment statistic = SBEnchantment.getEnchantByID(id, ((Long) enchants.get(o)).intValue());
+
+                    lore.addAll(statistic.getDescription());
+                }
+            }
+
+            if (size != 0) {
                 lore.add("");
             }
         } catch (ParseException e) {

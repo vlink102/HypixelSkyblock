@@ -16,6 +16,7 @@ public class Piercing extends SBEnchantment {
 
     public double piercedThroughEnemyDamageModifier = Statistic.fromPercentage(25);
 
+    public Integer[] enchantingTableCosts = new Integer[] {30};
     public Integer[] applyCosts = new Integer[] {27};
     public Integer[] rarities = new Integer[] {1};
     public int enchantingLevelRequired = 17;
@@ -41,7 +42,27 @@ public class Piercing extends SBEnchantment {
         }
         description.add(ChatColor.translateAlternateColorCodes('&', "&7Use this on an item in an Anvil"));
         description.add(ChatColor.translateAlternateColorCodes('&', "&7to apply it."));
-        description.add("");
+        
         return description;
+    }
+
+    @Override
+    public Integer[] getRarities() {
+        return rarities;
+    }
+
+    @Override
+    public Integer[] getApplyCosts() {
+        return applyCosts;
+    }
+
+    @Override
+    public Integer[] getEnchantingTableCosts() {
+        return enchantingTableCosts;
+    }
+
+    @Override
+    public double getBookshelfPower() {
+        return bookshelfPower;
     }
 }

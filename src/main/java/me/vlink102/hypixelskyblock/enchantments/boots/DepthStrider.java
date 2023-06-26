@@ -20,7 +20,8 @@ public class DepthStrider extends SBEnchantment {
         return getLevel() * Statistic.fromPercentage(100d/3d);
     }
 
-    public Integer[] applyCosts = new Integer[] {0,18,27};
+    public Integer[] enchantingTableCosts = new Integer[] {10,20,30};
+    public Integer[] applyCosts = new Integer[] {-1,18,27};
     public Integer[] rarities = new Integer[] {1,1,1};
     public double bookshelfPower = 4;
 
@@ -43,7 +44,27 @@ public class DepthStrider extends SBEnchantment {
         }
         description.add(ChatColor.translateAlternateColorCodes('&', "&7Use this on an item in an Anvil"));
         description.add(ChatColor.translateAlternateColorCodes('&', "&7to apply it."));
-        description.add("");
+        
         return description;
+    }
+
+    @Override
+    public Integer[] getRarities() {
+        return rarities;
+    }
+
+    @Override
+    public Integer[] getApplyCosts() {
+        return applyCosts;
+    }
+
+    @Override
+    public Integer[] getEnchantingTableCosts() {
+        return enchantingTableCosts;
+    }
+
+    @Override
+    public double getBookshelfPower() {
+        return bookshelfPower;
     }
 }

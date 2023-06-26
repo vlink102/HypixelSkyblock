@@ -2,6 +2,7 @@ package me.vlink102.hypixelskyblock;
 
 import lombok.Getter;
 import me.vlink102.hypixelskyblock.listeners.Damage;
+import me.vlink102.hypixelskyblock.listeners.ItemDrop;
 import me.vlink102.hypixelskyblock.player.SBPlayerManager;
 import org.bukkit.Bukkit;
 import org.bukkit.entity.Player;
@@ -17,6 +18,7 @@ public final class HypixelSkyblock extends JavaPlugin {
         this.playerUtils = new SBPlayerManager(this);
         Bukkit.getServer().getPluginManager().registerEvents(new Damage(this), this);
         Bukkit.getServer().getPluginManager().registerEvents(playerUtils, this);
+        Bukkit.getServer().getPluginManager().registerEvents(new ItemDrop(this), this);
         for (Player player : Bukkit.getOnlinePlayers()) {
             playerUtils.addPlayer(player);
         }

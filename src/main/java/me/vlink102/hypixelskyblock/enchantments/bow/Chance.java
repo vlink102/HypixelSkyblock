@@ -18,7 +18,8 @@ public class Chance extends SBEnchantment {
         return getLevel() * Statistic.fromPercentage(15);
     }
 
-    public Integer[] applyCosts = new Integer[] {0,27,41,91,179};
+    public Integer[] enchantingTableCosts = new Integer[] {15,30,45};
+    public Integer[] applyCosts = new Integer[] {-1,27,41,91,179};
     public Integer[] rarities = new Integer[] {1,1,1,1,2};
     public int enchantingLevelRequired = 11;
     public int bookshelfPower = 4;
@@ -45,7 +46,27 @@ public class Chance extends SBEnchantment {
             description.add(ChatColor.translateAlternateColorCodes('&', "&7Use this on an item in an Anvil"));
             description.add(ChatColor.translateAlternateColorCodes('&', "&7to apply it."));
         }
-        description.add("");
+        
         return description;
+    }
+
+    @Override
+    public Integer[] getRarities() {
+        return rarities;
+    }
+
+    @Override
+    public Integer[] getApplyCosts() {
+        return applyCosts;
+    }
+
+    @Override
+    public Integer[] getEnchantingTableCosts() {
+        return enchantingTableCosts;
+    }
+
+    @Override
+    public double getBookshelfPower() {
+        return bookshelfPower;
     }
 }

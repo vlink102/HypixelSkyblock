@@ -22,7 +22,8 @@ public class Flame extends SBEnchantment {
         return getLevel() * Statistic.fromPercentage(3);
     }
 
-    public Integer[] applyCosts = new Integer[] {23,0};
+    public Integer[] enchantingTableCosts = new Integer[] {25};
+    public Integer[] applyCosts = new Integer[] {23,-1};
     public Integer[] rarities = new Integer[] {1,1};
     public int bookshelfPower = 3;
 
@@ -45,7 +46,27 @@ public class Flame extends SBEnchantment {
         }
         description.add(ChatColor.translateAlternateColorCodes('&', "&7Use this on an item in an Anvil"));
         description.add(ChatColor.translateAlternateColorCodes('&', "&7to apply it."));
-        description.add("");
+        
         return description;
+    }
+
+    @Override
+    public Integer[] getRarities() {
+        return rarities;
+    }
+
+    @Override
+    public Integer[] getApplyCosts() {
+        return applyCosts;
+    }
+
+    @Override
+    public Integer[] getEnchantingTableCosts() {
+        return enchantingTableCosts;
+    }
+
+    @Override
+    public double getBookshelfPower() {
+        return bookshelfPower;
     }
 }

@@ -17,6 +17,7 @@ public class FrostWalker extends SBEnchantment {
         return getLevel();
     }
 
+    public Integer[] enchantingTableCosts = new Integer[] {10,20};
     public Integer[] applyCosts = new Integer[] {9,18};
     public Integer[] rarities = new Integer[] {1,1};
     public double bookshelfPower = 3;
@@ -41,7 +42,27 @@ public class FrostWalker extends SBEnchantment {
         }
         description.add(ChatColor.translateAlternateColorCodes('&', "&7Use this on an item in an Anvil"));
         description.add(ChatColor.translateAlternateColorCodes('&', "&7to apply it."));
-        description.add("");
+        
         return description;
+    }
+
+    @Override
+    public Integer[] getRarities() {
+        return rarities;
+    }
+
+    @Override
+    public Integer[] getApplyCosts() {
+        return applyCosts;
+    }
+
+    @Override
+    public Integer[] getEnchantingTableCosts() {
+        return enchantingTableCosts;
+    }
+
+    @Override
+    public double getBookshelfPower() {
+        return bookshelfPower;
     }
 }

@@ -67,4 +67,24 @@ public class SBEnchantment {
     public boolean doesConflict(SBEnchantment other) {
         return conflictingEnchantments.contains(other.getID());
     }
+
+    public Integer[] getEnchantingTableCosts() {
+        return new Integer[] {};
+    }
+
+    public Integer[] getApplyCosts() {
+        return new Integer[] {};
+    }
+
+    public double getBookshelfPower() {
+        return 0;
+    }
+
+    public double getEnchantingLevelRequired() {
+        return 0;
+    }
+
+    public Integer[] getRarities() {
+        return new Integer[] {};
+    }
 }

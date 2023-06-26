@@ -228,7 +228,7 @@ public class SBPlayerManager implements Listener {
         manageInventory(player);
     }
 
-    public void manageInventory(SBPlayer player) {
+    public static void manageInventory(SBPlayer player) {
         Player bukkitPlayer = player.getPlayerBind();
         PlayerInventory inventory = bukkitPlayer.getInventory();
         boolean changeMade = false;
@@ -250,7 +250,7 @@ public class SBPlayerManager implements Listener {
         }
     }
 
-    public boolean updateArmor(PlayerInventory inventory) {
+    public static boolean updateArmor(PlayerInventory inventory) {
         boolean changed = false;
         ItemStack helm = inventory.getHelmet();
         ItemStack chest = inventory.getChestplate();

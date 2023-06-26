@@ -17,7 +17,8 @@ public class DragonTracer extends SBEnchantment {
         return getLevel() * 2;
     }
 
-    public Integer[] applyCosts = new Integer[] {0,0,0,36,45};
+    public Integer[] enchantingTableCosts = new Integer[] {10,20,30,40,50};
+    public Integer[] applyCosts = new Integer[] {-1,-1,-1,36,45};
     public Integer[] rarities = new Integer[] {1,1,1,1,2};
     public int enchantingLevelRequired = 8;
     public int bookshelfPower = 8;
@@ -41,7 +42,27 @@ public class DragonTracer extends SBEnchantment {
         }
         description.add(ChatColor.translateAlternateColorCodes('&', "&7Use this on an item in an Anvil"));
         description.add(ChatColor.translateAlternateColorCodes('&', "&7to apply it."));
-        description.add("");
+        
         return description;
+    }
+
+    @Override
+    public Integer[] getRarities() {
+        return rarities;
+    }
+
+    @Override
+    public Integer[] getApplyCosts() {
+        return applyCosts;
+    }
+
+    @Override
+    public Integer[] getEnchantingTableCosts() {
+        return enchantingTableCosts;
+    }
+
+    @Override
+    public double getBookshelfPower() {
+        return bookshelfPower;
     }
 }

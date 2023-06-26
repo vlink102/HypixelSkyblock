@@ -18,6 +18,7 @@ public class Punch extends SBEnchantment {
         return getLevel() * 3;
     }
 
+    public Integer[] enchantingTableCosts = new Integer[] {15,30};
     public Integer[] applyCosts = new Integer[] {13,27};
     public Integer[] rarities = new Integer[] {1,1};
     public int bookshelfPower = 2;
@@ -41,7 +42,27 @@ public class Punch extends SBEnchantment {
         }
         description.add(ChatColor.translateAlternateColorCodes('&', "&7Use this on an item in an Anvil"));
         description.add(ChatColor.translateAlternateColorCodes('&', "&7to apply it."));
-        description.add("");
+        
         return description;
+    }
+
+    @Override
+    public Integer[] getRarities() {
+        return rarities;
+    }
+
+    @Override
+    public Integer[] getApplyCosts() {
+        return applyCosts;
+    }
+
+    @Override
+    public Integer[] getEnchantingTableCosts() {
+        return enchantingTableCosts;
+    }
+
+    @Override
+    public double getBookshelfPower() {
+        return bookshelfPower;
     }
 }

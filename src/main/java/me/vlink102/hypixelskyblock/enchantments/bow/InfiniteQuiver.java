@@ -18,7 +18,8 @@ public class InfiniteQuiver extends SBEnchantment {
         return getLevel() * Statistic.fromPercentage(3);
     }
 
-    public Integer[] applyCosts = new Integer[] {0,0,0,23,27,55,79,91,109,127};
+    public Integer[] enchantingTableCosts = new Integer[] {10,15,20,25,30};
+    public Integer[] applyCosts = new Integer[] {-1,-1,-1,23,27,55,79,91,109,127};
     public Integer[] rarities = new Integer[] {1,1,1,1,2,3,4,5,6,6};
     public int enchantingLevelRequired = 2;
     public int bookshelfPower = 3;
@@ -43,7 +44,27 @@ public class InfiniteQuiver extends SBEnchantment {
         }
         description.add(ChatColor.translateAlternateColorCodes('&', "&7Use this on an item in an Anvil"));
         description.add(ChatColor.translateAlternateColorCodes('&', "&7to apply it."));
-        description.add("");
+        
         return description;
+    }
+
+    @Override
+    public Integer[] getRarities() {
+        return rarities;
+    }
+
+    @Override
+    public Integer[] getApplyCosts() {
+        return applyCosts;
+    }
+
+    @Override
+    public Integer[] getEnchantingTableCosts() {
+        return enchantingTableCosts;
+    }
+
+    @Override
+    public double getBookshelfPower() {
+        return bookshelfPower;
     }
 }
