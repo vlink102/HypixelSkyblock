@@ -320,43 +320,43 @@ public class SBItem {
 
         item.setString("item_type", "");
         String material = SBUtils.getItemName(sbItem);
-        if (material.endsWith("SWORD")) {
+        if (material.endsWith("Sword")) {
             item.setString("item_type", "SWORD");
         }
-        if (material.endsWith("AXE")) {
+        if (material.endsWith("Axe")) {
             item.setString("item_type", "AXE");
         }
-        if (material.endsWith("PICKAXE")) {
+        if (material.endsWith("Pickaxe")) {
             item.setString("item_type", "PICKAXE");
         }
-        if (material.endsWith("HOE")) {
+        if (material.endsWith("Hoe")) {
             item.setString("item_type", "HOE");
         }
-        if (material.endsWith("SPADE")) {
+        if (material.endsWith("Shovel")) {
             item.setString("item_type", "SHOVEL");
         }
-        if (material.endsWith("SHEARS")) {
+        if (material.endsWith("Shears")) {
             item.setString("item_type", "SHEARS");
         }
-        if (material.endsWith("HELMET")) {
+        if (material.endsWith("Helmet") || material.endsWith("Cap")) {
             item.setString("item_type", "HELMET");
         }
-        if (material.endsWith("CHESTPLATE")) {
+        if (material.endsWith("Chestplate") || material.endsWith("Tunic")) {
             item.setString("item_type", "CHESTPLATE");
         }
-        if (material.endsWith("LEGGINGS")) {
+        if (material.endsWith("Leggings") || material.endsWith("Pants")) {
             item.setString("item_type", "LEGGINGS");
         }
-        if (material.endsWith("BOOTS")) {
+        if (material.endsWith("Boots") || material.endsWith("Shoes")) {
             item.setString("item_type", "BOOTS");
         }
-        if (material.endsWith("BOW")) {
+        if (material.endsWith("Bow")) {
             item.setString("item_type", "BOW");
         }
-        if (material.endsWith("FISHING_ROD")) {
+        if (material.endsWith("Rod")) {
             item.setString("item_type", "FISHING_ROD");
         }
-        if (material.endsWith("ARROW")) {
+        if (material.endsWith("Arrow")) {
             item.setString("item_type", "ARROW");
         }
 
@@ -393,6 +393,19 @@ public class SBItem {
         return item.getItem();
     }
 
+    public static final HashMap<Integer, Integer> RARITY_MAP = new HashMap<Integer, Integer>() {{
+        this.put(1, ItemRarity.COMMON.id);
+        this.put(2, ItemRarity.COMMON.id);
+        this.put(3, ItemRarity.COMMON.id);
+        this.put(4, ItemRarity.COMMON.id);
+        this.put(5, ItemRarity.UNCOMMON.id);
+        this.put(6, ItemRarity.RARE.id);
+        this.put(7, ItemRarity.EPIC.id);
+        this.put(8, ItemRarity.LEGENDARY.id);
+        this.put(9, ItemRarity.MYTHIC.id);
+        this.put(10, ItemRarity.MYTHIC.id);
+    }};
+
     public static ItemRarity getBookRarity(NBTItem nbtItem) {
         int tier = 1;
         try {
@@ -402,7 +415,7 @@ public class SBItem {
                 int id = Integer.parseInt((String) o);
                 SBEnchantment statistic = SBEnchantment.getEnchantByID(id, ((Long) enchants.get(o)).intValue());
 
-                tier = Math.max(tier, statistic.getRarities()[statistic.getLevel() - 1]);
+                tier = Math.max(tier, RARITY_MAP.get(statistic.getLevel()));
             }
         } catch (ParseException e) {
             throw new RuntimeException(e);
@@ -459,19 +472,19 @@ public class SBItem {
             piece = 0;
         }
         if (materialString.startsWith("LEATHER")) {
-            statistics.add(Statistic.Statistics.DEFENSE.getStatistic(VANILLA_ARMOR_DEFENSE.get(0)[piece]));
-        }
-        if (materialString.startsWith("GOLD")) {
             statistics.add(Statistic.Statistics.DEFENSE.getStatistic(VANILLA_ARMOR_DEFENSE.get(1)[piece]));
         }
-        if (materialString.startsWith("CHAINMAIL")) {
+        if (materialString.startsWith("GOLD")) {
             statistics.add(Statistic.Statistics.DEFENSE.getStatistic(VANILLA_ARMOR_DEFENSE.get(2)[piece]));
         }
-        if (materialString.startsWith("IRON")) {
+        if (materialString.startsWith("CHAINMAIL")) {
             statistics.add(Statistic.Statistics.DEFENSE.getStatistic(VANILLA_ARMOR_DEFENSE.get(3)[piece]));
         }
-        if (materialString.startsWith("DIAMOND")) {
+        if (materialString.startsWith("IRON")) {
             statistics.add(Statistic.Statistics.DEFENSE.getStatistic(VANILLA_ARMOR_DEFENSE.get(4)[piece]));
+        }
+        if (materialString.startsWith("DIAMOND")) {
+            statistics.add(Statistic.Statistics.DEFENSE.getStatistic(VANILLA_ARMOR_DEFENSE.get(5)[piece]));
         }
     }
 
@@ -521,7 +534,7 @@ public class SBItem {
                     lore.add(0, "");
                     lore.add(0, ChatColor.translateAlternateColorCodes('&', statistic.getColorFull() + statistic.getName() + " " + statistic.getRoundedValue()));
                 } else {
-                    lore.add(ChatColor.translateAlternateColorCodes('&', "&7" + statistic.getName() + ": " + statistic.getColorFull() + (statistic.getValue()>0 ? "+" : "") + statistic.getValue()));
+                    lore.add(ChatColor.translateAlternateColorCodes('&', "&7" + statistic.getName() + ": " + statistic.getColorFull() + (statistic.getValue()>0 ? "+" : "") + SBUtils.round(statistic.getValue())));
                 }
             }
             if (stats.keySet().size() != 0) {
@@ -535,19 +548,87 @@ public class SBItem {
         try {
             JSONObject enchants = (JSONObject) new JSONParser().parse(nbtItem.getString("sb_enchantments"));
             int size = enchants.keySet().size();
-            for (Object o : enchants.keySet()) {
-                int id = Integer.parseInt((String) o);
-                SBEnchantment statistic = SBEnchantment.getEnchantByID(id, ((Long) enchants.get(o)).intValue());
-
-                lore.add(ChatColor.translateAlternateColorCodes('&', "&9" + statistic.getDisplayName() + " " + toRomanNumerals(statistic.getLevel())));
-            }
-            if (size < 7) {
-                lore.add("");
+            if (size == 1) {
                 for (Object o : enchants.keySet()) {
                     int id = Integer.parseInt((String) o);
                     SBEnchantment statistic = SBEnchantment.getEnchantByID(id, ((Long) enchants.get(o)).intValue());
 
-                    lore.addAll(statistic.getDescription());
+                    lore.add(ChatColor.translateAlternateColorCodes('&', "&9" + statistic.getDisplayName() + " " + toRomanNumerals(statistic.getLevel())));
+                    if (nbtType == Material.ENCHANTED_BOOK) {
+                        lore.addAll(statistic.getFullDescription());
+                    } else {
+                        lore.addAll(statistic.getBasicDescription());
+                    }
+                }
+            } else if (size <= 5) {
+                double combinedLevel = 0;
+                for (Object o : enchants.keySet()) {
+                    int id = Integer.parseInt((String) o);
+                    SBEnchantment statistic = SBEnchantment.getEnchantByID(id, ((Long) enchants.get(o)).intValue());
+
+                    combinedLevel = SBUtils.getCombinedEnchantLevels(statistic.getApplyCost(), combinedLevel);
+
+                    lore.add(ChatColor.translateAlternateColorCodes('&', "&9" + statistic.getDisplayName() + " " + toRomanNumerals(statistic.getLevel())));
+
+                    lore.addAll(statistic.getBasicDescription());
+                }
+                if (nbtType == Material.ENCHANTED_BOOK) {
+                    lore.add("");
+                    lore.add(ChatColor.translateAlternateColorCodes('&', "&7Apply Cost: &3" + SBUtils.roundDown(combinedLevel) + " Exp Levels"));
+                    lore.add("");
+                    lore.add(ChatColor.translateAlternateColorCodes('&', "&7Use this on an item in an Anvil"));
+                    lore.add(ChatColor.translateAlternateColorCodes('&', "&7to apply it."));
+                }
+            } else if (size <= 9) {
+                double combinedLevel = 0;
+                for (Object o : enchants.keySet()) {
+                    int id = Integer.parseInt((String) o);
+                    SBEnchantment statistic = SBEnchantment.getEnchantByID(id, ((Long) enchants.get(o)).intValue());
+                    combinedLevel = SBUtils.getCombinedEnchantLevels(statistic.getApplyCost(), combinedLevel);
+
+                    lore.add(ChatColor.translateAlternateColorCodes('&', "&9" + statistic.getDisplayName() + " " + toRomanNumerals(statistic.getLevel())));
+                }
+                if (nbtType == Material.ENCHANTED_BOOK) {
+                    lore.add("");
+                    lore.add(ChatColor.translateAlternateColorCodes('&', "&7Apply Cost: &3" + SBUtils.roundDown(combinedLevel) + " Exp Levels"));
+                    lore.add("");
+                    lore.add(ChatColor.translateAlternateColorCodes('&', "&7Use this on an item in an Anvil"));
+                    lore.add(ChatColor.translateAlternateColorCodes('&', "&7to apply it."));
+                }
+            } else {
+                double combinedLevel = 0;
+                HashMap<Integer, List<String>> brokenLore = new HashMap<>();
+                int c = 0;
+                for (Object o : enchants.keySet()) {
+                    int id = Integer.parseInt((String) o);
+                    SBEnchantment statistic = SBEnchantment.getEnchantByID(id, ((Long) enchants.get(o)).intValue());
+                    combinedLevel = SBUtils.getCombinedEnchantLevels(statistic.getApplyCost(), combinedLevel);
+
+                    if (!brokenLore.containsKey(c)) {
+                        brokenLore.put(c, new ArrayList<>());
+                    }
+                    List<String> threeEnchants = brokenLore.get(c);
+                    if (threeEnchants.size() < 3) {
+                        brokenLore.get(c).add(ChatColor.translateAlternateColorCodes('&', "&9" + statistic.getDisplayName() + " " + toRomanNumerals(statistic.getLevel())));
+                    } else {
+                        c++;
+                        brokenLore.put(c, new ArrayList<>());
+                    }
+                }
+                for (Integer integer : brokenLore.keySet()) {
+                    List<String> broken = brokenLore.get(integer);
+                    StringJoiner joiner = new StringJoiner(ChatColor.translateAlternateColorCodes('&', "&9, &r"));
+                    for (String s : broken) {
+                        joiner.add(s);
+                    }
+                    lore.add(joiner.toString());
+                }
+                if (nbtType == Material.ENCHANTED_BOOK) {
+                    lore.add("");
+                    lore.add(ChatColor.translateAlternateColorCodes('&', "&7Apply Cost: &3" + SBUtils.roundDown(combinedLevel) + " Exp Levels"));
+                    lore.add("");
+                    lore.add(ChatColor.translateAlternateColorCodes('&', "&7Use this on an item in an Anvil"));
+                    lore.add(ChatColor.translateAlternateColorCodes('&', "&7to apply it."));
                 }
             }
 

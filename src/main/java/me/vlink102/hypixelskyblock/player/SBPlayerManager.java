@@ -18,6 +18,7 @@ import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.PlayerInventory;
 import org.bukkit.scheduler.BukkitRunnable;
 
+import javax.swing.plaf.basic.BasicSplitPaneDivider;
 import java.util.HashMap;
 import java.util.StringJoiner;
 import java.util.UUID;
@@ -47,6 +48,38 @@ public class SBPlayerManager implements Listener {
 
     public HashMap<UUID, SBPlayer> getPlayerMap() {
         return PLAYER_MAP;
+    }
+
+    public SBPlayer getByUUID(UUID uuid) {
+        for (UUID uuid1 : PLAYER_MAP.keySet()) {
+            if (uuid.equals(uuid1)) {
+                return PLAYER_MAP.get(uuid1);
+            }
+        }
+        return null;
+    }
+
+    /**
+     * Not recommended
+     */
+    public SBPlayer getByName(String name) {
+        for (UUID uuid : PLAYER_MAP.keySet()) {
+            SBPlayer player = PLAYER_MAP.get(uuid);
+            if (player.getPlayerBind().getName().equalsIgnoreCase(name)) {
+                return player;
+            }
+        }
+        return null;
+    }
+
+    public SBPlayer getByPlayerObject(Player player) {
+        for (UUID uuid : PLAYER_MAP.keySet()) {
+            SBPlayer player1 = PLAYER_MAP.get(uuid);
+            if (player1.getPlayerBind().getUniqueId().equals(player.getUniqueId())) {
+                return player1;
+            }
+        }
+        return null;
     }
 
     public void addPlayer(Player player) {

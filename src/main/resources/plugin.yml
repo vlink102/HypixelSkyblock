@@ -1,3 +1,7 @@
 name: HypixelSkyblock
 version: '${project.version}'
 main: me.vlink102.hypixelskyblock.HypixelSkyblock
+commands:
+  sb:
+    description: Skyblock commands
+    usage: /sb <args>

@@ -2,6 +2,7 @@ package me.vlink102.hypixelskyblock.enchantments.bow;
 
 import me.vlink102.hypixelskyblock.enchantments.SBEnchantment;
 import me.vlink102.hypixelskyblock.items.SBItem;
+import me.vlink102.hypixelskyblock.util.SBUtils;
 import me.vlink102.hypixelskyblock.util.Statistic;
 import org.apache.commons.lang.WordUtils;
 import org.bukkit.ChatColor;
@@ -20,7 +21,7 @@ public class Chance extends SBEnchantment {
 
     public Integer[] enchantingTableCosts = new Integer[] {15,30,45};
     public Integer[] applyCosts = new Integer[] {-1,27,41,91,179};
-    public Integer[] rarities = new Integer[] {1,1,1,1,2};
+    
     public int enchantingLevelRequired = 11;
     public int bookshelfPower = 4;
 
@@ -32,12 +33,12 @@ public class Chance extends SBEnchantment {
     }
 
     @Override
-    public List<String> getDescription() {
+    public List<String> getFullDescription() {
         List<String> description = new ArrayList<>();
         description.add(ChatColor.translateAlternateColorCodes('&', "&7Increases the chance of a"));
         description.add(ChatColor.translateAlternateColorCodes('&', "&7Monster dropping an item by"));
-        description.add(ChatColor.translateAlternateColorCodes('&', "&a" + Statistic.toPercentage((int)getItemDropChanceModifier()) + "%&7."));
-        description.add("");
+        description.add(ChatColor.translateAlternateColorCodes('&', "&a" + SBUtils.round(Statistic.toPercentage((int)getItemDropChanceModifier())) + "%&7."));
+        description.add(ChatColor.translateAlternateColorCodes('&', "&a&c"));
         if (applyCosts[getLevel() - 1] > 0) {
             description.add(ChatColor.translateAlternateColorCodes('&', "&7Apply Cost: &3" + applyCosts[getLevel() - 1] + " Exp Levels"));
             description.add("");
@@ -50,10 +51,7 @@ public class Chance extends SBEnchantment {
         return description;
     }
 
-    @Override
-    public Integer[] getRarities() {
-        return rarities;
-    }
+    
 
     @Override
     public Integer[] getApplyCosts() {

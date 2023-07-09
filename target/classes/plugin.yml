@@ -1,3 +1,7 @@
 name: HypixelSkyblock
-version: '1.0.9'
+version: '1.2.5'
 main: me.vlink102.hypixelskyblock.HypixelSkyblock
+commands:
+  sb:
+    description: Skyblock commands
+    usage: /sb <args>

@@ -2,6 +2,7 @@ package me.vlink102.hypixelskyblock.enchantments.helmet;
 
 import me.vlink102.hypixelskyblock.enchantments.SBEnchantment;
 import me.vlink102.hypixelskyblock.items.SBItem;
+import me.vlink102.hypixelskyblock.util.SBUtils;
 import org.bukkit.ChatColor;
 
 import java.util.ArrayList;
@@ -17,7 +18,7 @@ public class BigBrain extends SBEnchantment {
     }
 
     public Integer[] applyCosts = new Integer[] {-1,-1,55,79,91};
-    public Integer[] rarities = new Integer[] {1,1,2};
+    
     public int enchantingLevelRequired = 21;
 
     @Override
@@ -28,24 +29,22 @@ public class BigBrain extends SBEnchantment {
     }
 
     @Override
-    public List<String> getDescription() {
+    public List<String> getFullDescription() {
         List<String> description = new ArrayList<>();
-        description.add(ChatColor.translateAlternateColorCodes('&', "&7Grants &b+" + getIntelligenceAdditive() + " ✎ Intelligence&7."));
-        description.add("");
+        description.add(ChatColor.translateAlternateColorCodes('&', "&7Grants &b+" + SBUtils.round(getIntelligenceAdditive()) + " ✎ Intelligence&7."));
+        description.add(ChatColor.translateAlternateColorCodes('&', "&a&c"));
         if (applyCosts[getLevel() - 1] > 0) {
             description.add(ChatColor.translateAlternateColorCodes('&', "&7Apply Cost: &3" + applyCosts[getLevel() - 1] + " Exp Levels"));
             description.add("");
         }
+        description.add(ChatColor.translateAlternateColorCodes('&', "&7Applicable on: " + getAppliedToFancy()));
         description.add(ChatColor.translateAlternateColorCodes('&', "&7Use this on an item in an Anvil"));
         description.add(ChatColor.translateAlternateColorCodes('&', "&7to apply it."));
         
         return description;
     }
 
-    @Override
-    public Integer[] getRarities() {
-        return rarities;
-    }
+    
 
     @Override
     public Integer[] getApplyCosts() {

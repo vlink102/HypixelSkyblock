@@ -19,7 +19,7 @@ public class FrostWalker extends SBEnchantment {
 
     public Integer[] enchantingTableCosts = new Integer[] {10,20};
     public Integer[] applyCosts = new Integer[] {9,18};
-    public Integer[] rarities = new Integer[] {1,1};
+    
     public double bookshelfPower = 3;
 
     @Override
@@ -30,26 +30,24 @@ public class FrostWalker extends SBEnchantment {
     }
 
     @Override
-    public List<String> getDescription() {
+    public List<String> getFullDescription() {
         List<String> description = new ArrayList<>();
         description.add(ChatColor.translateAlternateColorCodes('&', "&7Ice blocks will be created below"));
         description.add(ChatColor.translateAlternateColorCodes('&', "&7you when you walk above water in"));
         description.add(ChatColor.translateAlternateColorCodes('&', "&7a radius of &a" + (int)getBlockFreezeRadius() + " &7blocks."));
-        description.add("");
+        description.add(ChatColor.translateAlternateColorCodes('&', "&a&c"));
         if (applyCosts[getLevel() - 1] > 0) {
             description.add(ChatColor.translateAlternateColorCodes('&', "&7Apply Cost: &3" + applyCosts[getLevel() - 1] + " Exp Levels"));
             description.add("");
         }
+        description.add(ChatColor.translateAlternateColorCodes('&', "&7Applicable on: " + getAppliedToFancy()));
         description.add(ChatColor.translateAlternateColorCodes('&', "&7Use this on an item in an Anvil"));
         description.add(ChatColor.translateAlternateColorCodes('&', "&7to apply it."));
         
         return description;
     }
 
-    @Override
-    public Integer[] getRarities() {
-        return rarities;
-    }
+    
 
     @Override
     public Integer[] getApplyCosts() {

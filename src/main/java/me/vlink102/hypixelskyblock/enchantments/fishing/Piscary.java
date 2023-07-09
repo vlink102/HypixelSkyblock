@@ -19,7 +19,7 @@ public class Piscary extends SBEnchantment {
 
     public Integer[] enchantingTableCosts = new Integer[] {8,16,24,36,48};
     public Integer[] applyCosts = new Integer[] {-1,-1,-1,-1,-1,55};
-    public Integer[] rarities = new Integer[] {1,1,1,1,2,3};
+    
     public int enchantingLevelRequired = 8;
     public int bookshelfPower = 6;
 
@@ -31,24 +31,22 @@ public class Piscary extends SBEnchantment {
     }
 
     @Override
-    public List<String> getDescription() {
+    public List<String> getFullDescription() {
         List<String> description = new ArrayList<>();
         description.add(ChatColor.translateAlternateColorCodes('&', "&7Grants &b+" + getFishingSpeedAdditive() + " ☂ Fishing Speed"));
-        description.add("");
+        description.add(ChatColor.translateAlternateColorCodes('&', "&a&c"));
         if (applyCosts[getLevel() - 1] > 0) {
             description.add(ChatColor.translateAlternateColorCodes('&', "&7Apply Cost: &3" + applyCosts[getLevel() - 1] + " Exp Levels"));
             description.add("");
         }
+        description.add(ChatColor.translateAlternateColorCodes('&', "&7Applicable on: " + getAppliedToFancy()));
         description.add(ChatColor.translateAlternateColorCodes('&', "&7Use this on an item in an Anvil"));
         description.add(ChatColor.translateAlternateColorCodes('&', "&7to apply it."));
         
         return description;
     }
 
-    @Override
-    public Integer[] getRarities() {
-        return rarities;
-    }
+    
 
     @Override
     public Integer[] getApplyCosts() {

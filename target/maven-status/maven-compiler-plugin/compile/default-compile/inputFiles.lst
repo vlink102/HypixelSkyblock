@@ -1,190 +1,191 @@
-C:\Users\Ethan\IdeaProjects\HypixelSkyblock\src\main\java\me\vlink102\hypixelskyblock\enchantments\fishing\Frail.java
-C:\Users\Ethan\IdeaProjects\HypixelSkyblock\src\main\java\me\vlink102\hypixelskyblock\enchantments\helmet\BigBrain.java
-C:\Users\Ethan\IdeaProjects\HypixelSkyblock\src\main\java\me\vlink102\hypixelskyblock\enchantments\bow\Flame.java
-C:\Users\Ethan\IdeaProjects\HypixelSkyblock\src\main\java\me\vlink102\hypixelskyblock\enchantments\sword\Luck.java
-C:\Users\Ethan\IdeaProjects\HypixelSkyblock\src\main\java\me\vlink102\hypixelskyblock\enchantments\tools\Cultivating.java
-C:\Users\Ethan\IdeaProjects\HypixelSkyblock\src\main\java\me\vlink102\hypixelskyblock\enchantments\ultimate\LastStand.java
-C:\Users\Ethan\IdeaProjects\HypixelSkyblock\src\main\java\me\vlink102\hypixelskyblock\enchantments\tools\turbo\TurboWheat.java
-C:\Users\Ethan\IdeaProjects\HypixelSkyblock\src\main\java\me\vlink102\hypixelskyblock\potions\TrueResistance.java
-C:\Users\Ethan\IdeaProjects\HypixelSkyblock\src\main\java\me\vlink102\hypixelskyblock\enchantments\sword\Smite.java
-C:\Users\Ethan\IdeaProjects\HypixelSkyblock\src\main\java\me\vlink102\hypixelskyblock\enchantments\tools\Compact.java
-C:\Users\Ethan\IdeaProjects\HypixelSkyblock\src\main\java\me\vlink102\hypixelskyblock\enchantments\leggings\SmartyPants.java
-C:\Users\Ethan\IdeaProjects\HypixelSkyblock\src\main\java\me\vlink102\hypixelskyblock\enchantments\bow\Punch.java
-C:\Users\Ethan\IdeaProjects\HypixelSkyblock\src\main\java\me\vlink102\hypixelskyblock\enchantments\equipment\GreenThumb.java
-C:\Users\Ethan\IdeaProjects\HypixelSkyblock\src\main\java\me\vlink102\hypixelskyblock\enchantments\fishing\LuckOfTheSea.java
-C:\Users\Ethan\IdeaProjects\HypixelSkyblock\src\main\java\me\vlink102\hypixelskyblock\enchantments\HardenedMana.java
-C:\Users\Ethan\IdeaProjects\HypixelSkyblock\src\main\java\me\vlink102\hypixelskyblock\enchantments\sword\FireAspect.java
-C:\Users\Ethan\IdeaProjects\HypixelSkyblock\src\main\java\me\vlink102\hypixelskyblock\enchantments\fishing\Piscary.java
-C:\Users\Ethan\IdeaProjects\HypixelSkyblock\src\main\java\me\vlink102\hypixelskyblock\potions\Mana.java
-C:\Users\Ethan\IdeaProjects\HypixelSkyblock\src\main\java\me\vlink102\hypixelskyblock\enchantments\Growth.java
-C:\Users\Ethan\IdeaProjects\HypixelSkyblock\src\main\java\me\vlink102\hypixelskyblock\enchantments\ultimate\Wisdom.java
-C:\Users\Ethan\IdeaProjects\HypixelSkyblock\src\main\java\me\vlink102\hypixelskyblock\potions\Strength.java
-C:\Users\Ethan\IdeaProjects\HypixelSkyblock\src\main\java\me\vlink102\hypixelskyblock\items\weaponsmith\UndeadSword.java
-C:\Users\Ethan\IdeaProjects\HypixelSkyblock\src\main\java\me\vlink102\hypixelskyblock\potions\WaterBreathing.java
-C:\Users\Ethan\IdeaProjects\HypixelSkyblock\src\main\java\me\vlink102\hypixelskyblock\enchantments\tools\turbo\TurboCocoa.java
-C:\Users\Ethan\IdeaProjects\HypixelSkyblock\src\main\java\me\vlink102\hypixelskyblock\potions\dungeon\DungeonIII.java
-C:\Users\Ethan\IdeaProjects\HypixelSkyblock\src\main\java\me\vlink102\hypixelskyblock\enchantments\FireProtection.java
-C:\Users\Ethan\IdeaProjects\HypixelSkyblock\src\main\java\me\vlink102\hypixelskyblock\enchantments\tools\turbo\TurboWart.java
-C:\Users\Ethan\IdeaProjects\HypixelSkyblock\src\main\java\me\vlink102\hypixelskyblock\listeners\Damage.java
-C:\Users\Ethan\IdeaProjects\HypixelSkyblock\src\main\java\me\vlink102\hypixelskyblock\enchantments\bow\Chance.java
-C:\Users\Ethan\IdeaProjects\HypixelSkyblock\src\main\java\me\vlink102\hypixelskyblock\enchantments\ultimate\UltimateJerry.java
-C:\Users\Ethan\IdeaProjects\HypixelSkyblock\src\main\java\me\vlink102\hypixelskyblock\potions\Weakness.java
-C:\Users\Ethan\IdeaProjects\HypixelSkyblock\src\main\java\me\vlink102\hypixelskyblock\enchantments\sword\Critical.java
-C:\Users\Ethan\IdeaProjects\HypixelSkyblock\src\main\java\me\vlink102\hypixelskyblock\enchantments\ultimate\FatalTempo.java
-C:\Users\Ethan\IdeaProjects\HypixelSkyblock\src\main\java\me\vlink102\hypixelskyblock\potions\Poison.java
-C:\Users\Ethan\IdeaProjects\HypixelSkyblock\src\main\java\me\vlink102\hypixelskyblock\enchantments\sword\ThunderLord.java
-C:\Users\Ethan\IdeaProjects\HypixelSkyblock\src\main\java\me\vlink102\hypixelskyblock\enchantments\ultimate\HabaneroTactics.java
-C:\Users\Ethan\IdeaProjects\HypixelSkyblock\src\main\java\me\vlink102\hypixelskyblock\enchantments\tools\turbo\TurboMelon.java
-C:\Users\Ethan\IdeaProjects\HypixelSkyblock\src\main\java\me\vlink102\hypixelskyblock\potions\dungeon\DungeonVII.java
-C:\Users\Ethan\IdeaProjects\HypixelSkyblock\src\main\java\me\vlink102\hypixelskyblock\enchantments\bow\DragonTracer.java
-C:\Users\Ethan\IdeaProjects\HypixelSkyblock\src\main\java\me\vlink102\hypixelskyblock\enchantments\ManaVampire.java
-C:\Users\Ethan\IdeaProjects\HypixelSkyblock\src\main\java\me\vlink102\hypixelskyblock\enchantments\tools\turbo\TurboCane.java
-C:\Users\Ethan\IdeaProjects\HypixelSkyblock\src\main\java\me\vlink102\hypixelskyblock\enchantments\fishing\SpikedHook.java
-C:\Users\Ethan\IdeaProjects\HypixelSkyblock\src\main\java\me\vlink102\hypixelskyblock\enchantments\StrongMana.java
-C:\Users\Ethan\IdeaProjects\HypixelSkyblock\src\main\java\me\vlink102\hypixelskyblock\enchantments\fishing\Blessing.java
-C:\Users\Ethan\IdeaProjects\HypixelSkyblock\src\main\java\me\vlink102\hypixelskyblock\enchantments\SBUltimate.java
-C:\Users\Ethan\IdeaProjects\HypixelSkyblock\src\main\java\me\vlink102\hypixelskyblock\potions\Damage.java
-C:\Users\Ethan\IdeaProjects\HypixelSkyblock\src\main\java\me\vlink102\hypixelskyblock\enchantments\SBEnchantment.java
-C:\Users\Ethan\IdeaProjects\HypixelSkyblock\src\main\java\me\vlink102\hypixelskyblock\enchantments\DragonHunter.java
-C:\Users\Ethan\IdeaProjects\HypixelSkyblock\src\main\java\me\vlink102\hypixelskyblock\potions\xpboost\MiningXPBoost.java
-C:\Users\Ethan\IdeaProjects\HypixelSkyblock\src\main\java\me\vlink102\hypixelskyblock\potions\dungeon\DungeonII.java
-C:\Users\Ethan\IdeaProjects\HypixelSkyblock\src\main\java\me\vlink102\hypixelskyblock\potions\Dodge.java
-C:\Users\Ethan\IdeaProjects\HypixelSkyblock\src\main\java\me\vlink102\hypixelskyblock\enchantments\helmet\Transylvanian.java
-C:\Users\Ethan\IdeaProjects\HypixelSkyblock\src\main\java\me\vlink102\hypixelskyblock\potions\dungeon\DungeonI.java
-C:\Users\Ethan\IdeaProjects\HypixelSkyblock\src\main\java\me\vlink102\hypixelskyblock\enchantments\necklace\Quantum.java
-C:\Users\Ethan\IdeaProjects\HypixelSkyblock\src\main\java\me\vlink102\hypixelskyblock\enchantments\ultimate\Duplex.java
-C:\Users\Ethan\IdeaProjects\HypixelSkyblock\src\main\java\me\vlink102\hypixelskyblock\enchantments\Cubism.java
-C:\Users\Ethan\IdeaProjects\HypixelSkyblock\src\main\java\me\vlink102\hypixelskyblock\enchantments\sword\Cleave.java
-C:\Users\Ethan\IdeaProjects\HypixelSkyblock\src\main\java\me\vlink102\hypixelskyblock\enchantments\tools\Pristine.java
-C:\Users\Ethan\IdeaProjects\HypixelSkyblock\src\main\java\me\vlink102\hypixelskyblock\enchantments\ultimate\BobbinTime.java
-C:\Users\Ethan\IdeaProjects\HypixelSkyblock\src\main\java\me\vlink102\hypixelskyblock\enchantments\fishing\Magnet.java
-C:\Users\Ethan\IdeaProjects\HypixelSkyblock\src\main\java\me\vlink102\hypixelskyblock\potions\Adrenaline.java
-C:\Users\Ethan\IdeaProjects\HypixelSkyblock\src\main\java\me\vlink102\hypixelskyblock\enchantments\tools\Replenish.java
-C:\Users\Ethan\IdeaProjects\HypixelSkyblock\src\main\java\me\vlink102\hypixelskyblock\enchantments\sword\EnderSlayer.java
-C:\Users\Ethan\IdeaProjects\HypixelSkyblock\src\main\java\me\vlink102\hypixelskyblock\enchantments\sword\Lethality.java
-C:\Users\Ethan\IdeaProjects\HypixelSkyblock\src\main\java\me\vlink102\hypixelskyblock\potions\Invisibility.java
-C:\Users\Ethan\IdeaProjects\HypixelSkyblock\src\main\java\me\vlink102\hypixelskyblock\potions\xpboost\FishingXPBoost.java
-C:\Users\Ethan\IdeaProjects\HypixelSkyblock\src\main\java\me\vlink102\hypixelskyblock\enchantments\ultimate\NoPainNoGain.java
-C:\Users\Ethan\IdeaProjects\HypixelSkyblock\src\main\java\me\vlink102\hypixelskyblock\enchantments\ultimate\Rend.java
-C:\Users\Ethan\IdeaProjects\HypixelSkyblock\src\main\java\me\vlink102\hypixelskyblock\enchantments\fishing\Charm.java
-C:\Users\Ethan\IdeaProjects\HypixelSkyblock\src\main\java\me\vlink102\hypixelskyblock\potions\Archery.java
-C:\Users\Ethan\IdeaProjects\HypixelSkyblock\src\main\java\me\vlink102\hypixelskyblock\enchantments\tools\Delicate.java
-C:\Users\Ethan\IdeaProjects\HypixelSkyblock\src\main\java\me\vlink102\hypixelskyblock\enchantments\sword\TripleStrike.java
-C:\Users\Ethan\IdeaProjects\HypixelSkyblock\src\main\java\me\vlink102\hypixelskyblock\enchantments\BlastProtection.java
-C:\Users\Ethan\IdeaProjects\HypixelSkyblock\src\main\java\me\vlink102\hypixelskyblock\enchantments\Looting.java
-C:\Users\Ethan\IdeaProjects\HypixelSkyblock\src\main\java\me\vlink102\hypixelskyblock\enchantments\tools\Sunder.java
-C:\Users\Ethan\IdeaProjects\HypixelSkyblock\src\main\java\me\vlink102\hypixelskyblock\potions\Absorption.java
-C:\Users\Ethan\IdeaProjects\HypixelSkyblock\src\main\java\me\vlink102\hypixelskyblock\potions\Stun.java
-C:\Users\Ethan\IdeaProjects\HypixelSkyblock\src\main\java\me\vlink102\hypixelskyblock\enchantments\Rejuvenate.java
-C:\Users\Ethan\IdeaProjects\HypixelSkyblock\src\main\java\me\vlink102\hypixelskyblock\potions\MushedGlowyTonic.java
-C:\Users\Ethan\IdeaProjects\HypixelSkyblock\src\main\java\me\vlink102\hypixelskyblock\util\SBUtils.java
-C:\Users\Ethan\IdeaProjects\HypixelSkyblock\src\main\java\me\vlink102\hypixelskyblock\enchantments\bow\InfiniteQuiver.java
-C:\Users\Ethan\IdeaProjects\HypixelSkyblock\src\main\java\me\vlink102\hypixelskyblock\enchantments\equipment\Prosperity.java
-C:\Users\Ethan\IdeaProjects\HypixelSkyblock\src\main\java\me\vlink102\hypixelskyblock\enchantments\sword\GiantKiller.java
-C:\Users\Ethan\IdeaProjects\HypixelSkyblock\src\main\java\me\vlink102\hypixelskyblock\enchantments\sword\Vampirism.java
-C:\Users\Ethan\IdeaProjects\HypixelSkyblock\src\main\java\me\vlink102\hypixelskyblock\enchantments\fishing\Corruption.java
-C:\Users\Ethan\IdeaProjects\HypixelSkyblock\src\main\java\me\vlink102\hypixelskyblock\potions\Blindness.java
-C:\Users\Ethan\IdeaProjects\HypixelSkyblock\src\main\java\me\vlink102\hypixelskyblock\potions\Regeneration.java
-C:\Users\Ethan\IdeaProjects\HypixelSkyblock\src\main\java\me\vlink102\hypixelskyblock\enchantments\ultimate\Inferno.java
-C:\Users\Ethan\IdeaProjects\HypixelSkyblock\src\main\java\me\vlink102\hypixelskyblock\potions\SBPotion.java
-C:\Users\Ethan\IdeaProjects\HypixelSkyblock\src\main\java\me\vlink102\hypixelskyblock\potions\Critical.java
-C:\Users\Ethan\IdeaProjects\HypixelSkyblock\src\main\java\me\vlink102\hypixelskyblock\enchantments\Thorns.java
-C:\Users\Ethan\IdeaProjects\HypixelSkyblock\src\main\java\me\vlink102\hypixelskyblock\enchantments\helmet\AquaAffinity.java
-C:\Users\Ethan\IdeaProjects\HypixelSkyblock\src\main\java\me\vlink102\hypixelskyblock\enchantments\ProjectileProtection.java
-C:\Users\Ethan\IdeaProjects\HypixelSkyblock\src\main\java\me\vlink102\hypixelskyblock\enchantments\sword\Scavenger.java
-C:\Users\Ethan\IdeaProjects\HypixelSkyblock\src\main\java\me\vlink102\hypixelskyblock\enchantments\tools\turbo\TurboPotato.java
-C:\Users\Ethan\IdeaProjects\HypixelSkyblock\src\main\java\me\vlink102\hypixelskyblock\enchantments\sword\Knockback.java
-C:\Users\Ethan\IdeaProjects\HypixelSkyblock\src\main\java\me\vlink102\hypixelskyblock\enchantments\tools\turbo\TurboCarrot.java
-C:\Users\Ethan\IdeaProjects\HypixelSkyblock\src\main\java\me\vlink102\hypixelskyblock\enchantments\sword\Syphon.java
-C:\Users\Ethan\IdeaProjects\HypixelSkyblock\src\main\java\me\vlink102\hypixelskyblock\potions\Burning.java
-C:\Users\Ethan\IdeaProjects\HypixelSkyblock\src\main\java\me\vlink102\hypixelskyblock\potions\dungeon\DungeonIV.java
-C:\Users\Ethan\IdeaProjects\HypixelSkyblock\src\main\java\me\vlink102\hypixelskyblock\enchantments\boots\FrostWalker.java
-C:\Users\Ethan\IdeaProjects\HypixelSkyblock\src\main\java\me\vlink102\hypixelskyblock\enchantments\ultimate\Legion.java
-C:\Users\Ethan\IdeaProjects\HypixelSkyblock\src\main\java\me\vlink102\hypixelskyblock\potions\Slowness.java
-C:\Users\Ethan\IdeaProjects\HypixelSkyblock\src\main\java\me\vlink102\hypixelskyblock\potions\Spirit.java
-C:\Users\Ethan\IdeaProjects\HypixelSkyblock\src\main\java\me\vlink102\hypixelskyblock\enchantments\sword\Sharpness.java
-C:\Users\Ethan\IdeaProjects\HypixelSkyblock\src\main\java\me\vlink102\hypixelskyblock\enchantments\ultimate\Flash.java
-C:\Users\Ethan\IdeaProjects\HypixelSkyblock\src\main\java\me\vlink102\hypixelskyblock\enchantments\Protection.java
-C:\Users\Ethan\IdeaProjects\HypixelSkyblock\src\main\java\me\vlink102\hypixelskyblock\potions\JumpBoost.java
-C:\Users\Ethan\IdeaProjects\HypixelSkyblock\src\main\java\me\vlink102\hypixelskyblock\enchantments\chestplate\CounterStrike.java
-C:\Users\Ethan\IdeaProjects\HypixelSkyblock\src\main\java\me\vlink102\hypixelskyblock\enchantments\bow\Overload.java
-C:\Users\Ethan\IdeaProjects\HypixelSkyblock\src\main\java\me\vlink102\hypixelskyblock\enchantments\helmet\Hecatomb.java
-C:\Users\Ethan\IdeaProjects\HypixelSkyblock\src\main\java\me\vlink102\hypixelskyblock\enchantments\tools\SmeltingTouch.java
-C:\Users\Ethan\IdeaProjects\HypixelSkyblock\src\main\java\me\vlink102\hypixelskyblock\enchantments\sword\TitanKiller.java
-C:\Users\Ethan\IdeaProjects\HypixelSkyblock\src\main\java\me\vlink102\hypixelskyblock\enchantments\ultimate\Chimera.java
-C:\Users\Ethan\IdeaProjects\HypixelSkyblock\src\main\java\me\vlink102\hypixelskyblock\potions\xpboost\FarmingXPBoost.java
-C:\Users\Ethan\IdeaProjects\HypixelSkyblock\src\main\java\me\vlink102\hypixelskyblock\enchantments\Respiration.java
-C:\Users\Ethan\IdeaProjects\HypixelSkyblock\src\main\java\me\vlink102\hypixelskyblock\enchantments\sword\LifeSteal.java
-C:\Users\Ethan\IdeaProjects\HypixelSkyblock\src\main\java\me\vlink102\hypixelskyblock\enchantments\sword\Venomous.java
-C:\Users\Ethan\IdeaProjects\HypixelSkyblock\src\main\java\me\vlink102\hypixelskyblock\HypixelSkyblock.java
-C:\Users\Ethan\IdeaProjects\HypixelSkyblock\src\main\java\me\vlink102\hypixelskyblock\enchantments\tools\Harvesting.java
-C:\Users\Ethan\IdeaProjects\HypixelSkyblock\src\main\java\me\vlink102\hypixelskyblock\potions\Rabbit.java
-C:\Users\Ethan\IdeaProjects\HypixelSkyblock\src\main\java\me\vlink102\hypixelskyblock\enchantments\FerociousMana.java
-C:\Users\Ethan\IdeaProjects\HypixelSkyblock\src\main\java\me\vlink102\hypixelskyblock\enchantments\tools\SilkTouch.java
-C:\Users\Ethan\IdeaProjects\HypixelSkyblock\src\main\java\me\vlink102\hypixelskyblock\potions\Spelunker.java
-C:\Users\Ethan\IdeaProjects\HypixelSkyblock\src\main\java\me\vlink102\hypixelskyblock\enchantments\bow\Power.java
-C:\Users\Ethan\IdeaProjects\HypixelSkyblock\src\main\java\me\vlink102\hypixelskyblock\enchantments\fishing\Expertise.java
-C:\Users\Ethan\IdeaProjects\HypixelSkyblock\src\main\java\me\vlink102\hypixelskyblock\potions\Defense.java
-C:\Users\Ethan\IdeaProjects\HypixelSkyblock\src\main\java\me\vlink102\hypixelskyblock\potions\Haste.java
-C:\Users\Ethan\IdeaProjects\HypixelSkyblock\src\main\java\me\vlink102\hypixelskyblock\enchantments\fishing\Angler.java
-C:\Users\Ethan\IdeaProjects\HypixelSkyblock\src\main\java\me\vlink102\hypixelskyblock\enchantments\sword\Prosecute.java
-C:\Users\Ethan\IdeaProjects\HypixelSkyblock\src\main\java\me\vlink102\hypixelskyblock\util\Statistic.java
-C:\Users\Ethan\IdeaProjects\HypixelSkyblock\src\main\java\me\vlink102\hypixelskyblock\enchantments\ultimate\Bank.java
-C:\Users\Ethan\IdeaProjects\HypixelSkyblock\src\main\java\me\vlink102\hypixelskyblock\enchantments\sword\BaneOfArthropods.java
-C:\Users\Ethan\IdeaProjects\HypixelSkyblock\src\main\java\me\vlink102\hypixelskyblock\listeners\Inventory.java
-C:\Users\Ethan\IdeaProjects\HypixelSkyblock\src\main\java\me\vlink102\hypixelskyblock\enchantments\Respite.java
-C:\Users\Ethan\IdeaProjects\HypixelSkyblock\src\main\java\me\vlink102\hypixelskyblock\potions\Venomous.java
-C:\Users\Ethan\IdeaProjects\HypixelSkyblock\src\main\java\me\vlink102\hypixelskyblock\enchantments\tools\turbo\TurboPumpkin.java
-C:\Users\Ethan\IdeaProjects\HypixelSkyblock\src\main\java\me\vlink102\hypixelskyblock\enchantments\bow\Piercing.java
-C:\Users\Ethan\IdeaProjects\HypixelSkyblock\src\main\java\me\vlink102\hypixelskyblock\enchantments\tools\Rainbow.java
-C:\Users\Ethan\IdeaProjects\HypixelSkyblock\src\main\java\me\vlink102\hypixelskyblock\enchantments\chestplate\Reflection.java
-C:\Users\Ethan\IdeaProjects\HypixelSkyblock\src\main\java\me\vlink102\hypixelskyblock\enchantments\chestplate\TrueDefense.java
-C:\Users\Ethan\IdeaProjects\HypixelSkyblock\src\main\java\me\vlink102\hypixelskyblock\potions\Speed.java
-C:\Users\Ethan\IdeaProjects\HypixelSkyblock\src\main\java\me\vlink102\hypixelskyblock\enchantments\ultimate\Swarm.java
-C:\Users\Ethan\IdeaProjects\HypixelSkyblock\src\main\java\me\vlink102\hypixelskyblock\enchantments\ultimate\TheOne.java
-C:\Users\Ethan\IdeaProjects\HypixelSkyblock\src\main\java\me\vlink102\hypixelskyblock\potions\dungeon\DungeonVI.java
-C:\Users\Ethan\IdeaProjects\HypixelSkyblock\src\main\java\me\vlink102\hypixelskyblock\enchantments\tools\Efficiency.java
-C:\Users\Ethan\IdeaProjects\HypixelSkyblock\src\main\java\me\vlink102\hypixelskyblock\enchantments\ultimate\OneForAll.java
-C:\Users\Ethan\IdeaProjects\HypixelSkyblock\src\main\java\me\vlink102\hypixelskyblock\enchantments\ultimate\Combo.java
-C:\Users\Ethan\IdeaProjects\HypixelSkyblock\src\main\java\me\vlink102\hypixelskyblock\enchantments\sword\ThunderBolt.java
-C:\Users\Ethan\IdeaProjects\HypixelSkyblock\src\main\java\me\vlink102\hypixelskyblock\enchantments\sword\Execute.java
-C:\Users\Ethan\IdeaProjects\HypixelSkyblock\src\main\java\me\vlink102\hypixelskyblock\potions\Wounded.java
-C:\Users\Ethan\IdeaProjects\HypixelSkyblock\src\main\java\me\vlink102\hypixelskyblock\potions\MagicFind.java
-C:\Users\Ethan\IdeaProjects\HypixelSkyblock\src\main\java\me\vlink102\hypixelskyblock\potions\WispsIceFlavoredWater.java
-C:\Users\Ethan\IdeaProjects\HypixelSkyblock\src\main\java\me\vlink102\hypixelskyblock\potions\dungeon\DungeonV.java
-C:\Users\Ethan\IdeaProjects\HypixelSkyblock\src\main\java\me\vlink102\hypixelskyblock\potions\FireResistance.java
-C:\Users\Ethan\IdeaProjects\HypixelSkyblock\src\main\java\me\vlink102\hypixelskyblock\potions\Experience.java
-C:\Users\Ethan\IdeaProjects\HypixelSkyblock\src\main\java\me\vlink102\hypixelskyblock\potions\xpboost\ForagingXPBoost.java
-C:\Users\Ethan\IdeaProjects\HypixelSkyblock\src\main\java\me\vlink102\hypixelskyblock\potions\NightVision.java
-C:\Users\Ethan\IdeaProjects\HypixelSkyblock\src\main\java\me\vlink102\hypixelskyblock\enchantments\fishing\Caster.java
-C:\Users\Ethan\IdeaProjects\HypixelSkyblock\src\main\java\me\vlink102\hypixelskyblock\potions\Stamina.java
-C:\Users\Ethan\IdeaProjects\HypixelSkyblock\src\main\java\me\vlink102\hypixelskyblock\potions\Knockback.java
-C:\Users\Ethan\IdeaProjects\HypixelSkyblock\src\main\java\me\vlink102\hypixelskyblock\enchantments\Impaling.java
-C:\Users\Ethan\IdeaProjects\HypixelSkyblock\src\main\java\me\vlink102\hypixelskyblock\enchantments\DivineGift.java
-C:\Users\Ethan\IdeaProjects\HypixelSkyblock\src\main\java\me\vlink102\hypixelskyblock\potions\Healing.java
-C:\Users\Ethan\IdeaProjects\HypixelSkyblock\src\main\java\me\vlink102\hypixelskyblock\enchantments\sword\ManaSteal.java
-C:\Users\Ethan\IdeaProjects\HypixelSkyblock\src\main\java\me\vlink102\hypixelskyblock\enchantments\sword\Champion.java
-C:\Users\Ethan\IdeaProjects\HypixelSkyblock\src\main\java\me\vlink102\hypixelskyblock\potions\PetLuck.java
-C:\Users\Ethan\IdeaProjects\HypixelSkyblock\src\main\java\me\vlink102\hypixelskyblock\enchantments\fishing\Lure.java
-C:\Users\Ethan\IdeaProjects\HypixelSkyblock\src\main\java\me\vlink102\hypixelskyblock\enchantments\boots\DepthStrider.java
-C:\Users\Ethan\IdeaProjects\HypixelSkyblock\src\main\java\me\vlink102\hypixelskyblock\enchantments\tools\turbo\TurboMushroom.java
-C:\Users\Ethan\IdeaProjects\HypixelSkyblock\src\main\java\me\vlink102\hypixelskyblock\enchantments\ultimate\SoulEater.java
-C:\Users\Ethan\IdeaProjects\HypixelSkyblock\src\main\java\me\vlink102\hypixelskyblock\enchantments\tools\turbo\TurboCacti.java
-C:\Users\Ethan\IdeaProjects\HypixelSkyblock\src\main\java\me\vlink102\hypixelskyblock\enchantments\equipment\Cayenne.java
-C:\Users\Ethan\IdeaProjects\HypixelSkyblock\src\main\java\me\vlink102\hypixelskyblock\enchantments\boots\FeatherFalling.java
-C:\Users\Ethan\IdeaProjects\HypixelSkyblock\src\main\java\me\vlink102\hypixelskyblock\enchantments\boots\SugarRush.java
-C:\Users\Ethan\IdeaProjects\HypixelSkyblock\src\main\java\me\vlink102\hypixelskyblock\enchantments\Vicious.java
-C:\Users\Ethan\IdeaProjects\HypixelSkyblock\src\main\java\me\vlink102\hypixelskyblock\player\SBPlayer.java
-C:\Users\Ethan\IdeaProjects\HypixelSkyblock\src\main\java\me\vlink102\hypixelskyblock\enchantments\Smoldering.java
-C:\Users\Ethan\IdeaProjects\HypixelSkyblock\src\main\java\me\vlink102\hypixelskyblock\enchantments\ultimate\UltimateWise.java
-C:\Users\Ethan\IdeaProjects\HypixelSkyblock\src\main\java\me\vlink102\hypixelskyblock\enchantments\bow\Snipe.java
-C:\Users\Ethan\IdeaProjects\HypixelSkyblock\src\main\java\me\vlink102\hypixelskyblock\enchantments\sword\FirstStrike.java
-C:\Users\Ethan\IdeaProjects\HypixelSkyblock\src\main\java\me\vlink102\hypixelskyblock\potions\xpboost\EnchantingXPBoost.java
-C:\Users\Ethan\IdeaProjects\HypixelSkyblock\src\main\java\me\vlink102\hypixelskyblock\enchantments\tools\Fortune.java
-C:\Users\Ethan\IdeaProjects\HypixelSkyblock\src\main\java\me\vlink102\hypixelskyblock\enchantments\Experience.java
-C:\Users\Ethan\IdeaProjects\HypixelSkyblock\src\main\java\me\vlink102\hypixelskyblock\potions\Agility.java
-C:\Users\Ethan\IdeaProjects\HypixelSkyblock\src\main\java\me\vlink102\hypixelskyblock\potions\xpboost\AlchemyXPBoost.java
-C:\Users\Ethan\IdeaProjects\HypixelSkyblock\src\main\java\me\vlink102\hypixelskyblock\player\SBPlayerManager.java
-C:\Users\Ethan\IdeaProjects\HypixelSkyblock\src\main\java\me\vlink102\hypixelskyblock\potions\xpboost\CombatXPBoost.java
-C:\Users\Ethan\IdeaProjects\HypixelSkyblock\src\main\java\me\vlink102\hypixelskyblock\items\SBItem.java
-C:\Users\Ethan\IdeaProjects\HypixelSkyblock\src\main\java\me\vlink102\hypixelskyblock\enchantments\Tabasco.java
+/Users/ethan/Library/Mobile Documents/com~apple~CloudDocs/Misc/Java/HypixelSkyblock/src/main/java/me/vlink102/hypixelskyblock/potions/Stamina.java
+/Users/ethan/Library/Mobile Documents/com~apple~CloudDocs/Misc/Java/HypixelSkyblock/src/main/java/me/vlink102/hypixelskyblock/enchantments/helmet/Transylvanian.java
+/Users/ethan/Library/Mobile Documents/com~apple~CloudDocs/Misc/Java/HypixelSkyblock/src/main/java/me/vlink102/hypixelskyblock/potions/Critical.java
+/Users/ethan/Library/Mobile Documents/com~apple~CloudDocs/Misc/Java/HypixelSkyblock/src/main/java/me/vlink102/hypixelskyblock/enchantments/tools/Efficiency.java
+/Users/ethan/Library/Mobile Documents/com~apple~CloudDocs/Misc/Java/HypixelSkyblock/src/main/java/me/vlink102/hypixelskyblock/enchantments/sword/Sharpness.java
+/Users/ethan/Library/Mobile Documents/com~apple~CloudDocs/Misc/Java/HypixelSkyblock/src/main/java/me/vlink102/hypixelskyblock/enchantments/FireProtection.java
+/Users/ethan/Library/Mobile Documents/com~apple~CloudDocs/Misc/Java/HypixelSkyblock/src/main/java/me/vlink102/hypixelskyblock/enchantments/tools/turbo/TurboMushroom.java
+/Users/ethan/Library/Mobile Documents/com~apple~CloudDocs/Misc/Java/HypixelSkyblock/src/main/java/me/vlink102/hypixelskyblock/potions/xpboost/MiningXPBoost.java
+/Users/ethan/Library/Mobile Documents/com~apple~CloudDocs/Misc/Java/HypixelSkyblock/src/main/java/me/vlink102/hypixelskyblock/potions/xpboost/AlchemyXPBoost.java
+/Users/ethan/Library/Mobile Documents/com~apple~CloudDocs/Misc/Java/HypixelSkyblock/src/main/java/me/vlink102/hypixelskyblock/enchantments/sword/GiantKiller.java
+/Users/ethan/Library/Mobile Documents/com~apple~CloudDocs/Misc/Java/HypixelSkyblock/src/main/java/me/vlink102/hypixelskyblock/potions/Slowness.java
+/Users/ethan/Library/Mobile Documents/com~apple~CloudDocs/Misc/Java/HypixelSkyblock/src/main/java/me/vlink102/hypixelskyblock/enchantments/tools/Compact.java
+/Users/ethan/Library/Mobile Documents/com~apple~CloudDocs/Misc/Java/HypixelSkyblock/src/main/java/me/vlink102/hypixelskyblock/enchantments/sword/BaneOfArthropods.java
+/Users/ethan/Library/Mobile Documents/com~apple~CloudDocs/Misc/Java/HypixelSkyblock/src/main/java/me/vlink102/hypixelskyblock/enchantments/tools/turbo/TurboCacti.java
+/Users/ethan/Library/Mobile Documents/com~apple~CloudDocs/Misc/Java/HypixelSkyblock/src/main/java/me/vlink102/hypixelskyblock/potions/Rabbit.java
+/Users/ethan/Library/Mobile Documents/com~apple~CloudDocs/Misc/Java/HypixelSkyblock/src/main/java/me/vlink102/hypixelskyblock/enchantments/fishing/Corruption.java
+/Users/ethan/Library/Mobile Documents/com~apple~CloudDocs/Misc/Java/HypixelSkyblock/src/main/java/me/vlink102/hypixelskyblock/enchantments/fishing/Angler.java
+/Users/ethan/Library/Mobile Documents/com~apple~CloudDocs/Misc/Java/HypixelSkyblock/src/main/java/me/vlink102/hypixelskyblock/enchantments/tools/turbo/TurboCarrot.java
+/Users/ethan/Library/Mobile Documents/com~apple~CloudDocs/Misc/Java/HypixelSkyblock/src/main/java/me/vlink102/hypixelskyblock/enchantments/ProjectileProtection.java
+/Users/ethan/Library/Mobile Documents/com~apple~CloudDocs/Misc/Java/HypixelSkyblock/src/main/java/me/vlink102/hypixelskyblock/enchantments/sword/Prosecute.java
+/Users/ethan/Library/Mobile Documents/com~apple~CloudDocs/Misc/Java/HypixelSkyblock/src/main/java/me/vlink102/hypixelskyblock/enchantments/tools/Delicate.java
+/Users/ethan/Library/Mobile Documents/com~apple~CloudDocs/Misc/Java/HypixelSkyblock/src/main/java/me/vlink102/hypixelskyblock/enchantments/fishing/LuckOfTheSea.java
+/Users/ethan/Library/Mobile Documents/com~apple~CloudDocs/Misc/Java/HypixelSkyblock/src/main/java/me/vlink102/hypixelskyblock/enchantments/tools/turbo/TurboMelon.java
+/Users/ethan/Library/Mobile Documents/com~apple~CloudDocs/Misc/Java/HypixelSkyblock/src/main/java/me/vlink102/hypixelskyblock/enchantments/leggings/SmartyPants.java
+/Users/ethan/Library/Mobile Documents/com~apple~CloudDocs/Misc/Java/HypixelSkyblock/src/main/java/me/vlink102/hypixelskyblock/enchantments/SBEnchantment.java
+/Users/ethan/Library/Mobile Documents/com~apple~CloudDocs/Misc/Java/HypixelSkyblock/src/main/java/me/vlink102/hypixelskyblock/listeners/ItemDrop.java
+/Users/ethan/Library/Mobile Documents/com~apple~CloudDocs/Misc/Java/HypixelSkyblock/src/main/java/me/vlink102/hypixelskyblock/enchantments/boots/SugarRush.java
+/Users/ethan/Library/Mobile Documents/com~apple~CloudDocs/Misc/Java/HypixelSkyblock/src/main/java/me/vlink102/hypixelskyblock/potions/TrueResistance.java
+/Users/ethan/Library/Mobile Documents/com~apple~CloudDocs/Misc/Java/HypixelSkyblock/src/main/java/me/vlink102/hypixelskyblock/potions/Weakness.java
+/Users/ethan/Library/Mobile Documents/com~apple~CloudDocs/Misc/Java/HypixelSkyblock/src/main/java/me/vlink102/hypixelskyblock/enchantments/ultimate/FatalTempo.java
+/Users/ethan/Library/Mobile Documents/com~apple~CloudDocs/Misc/Java/HypixelSkyblock/src/main/java/me/vlink102/hypixelskyblock/enchantments/chestplate/CounterStrike.java
+/Users/ethan/Library/Mobile Documents/com~apple~CloudDocs/Misc/Java/HypixelSkyblock/src/main/java/me/vlink102/hypixelskyblock/enchantments/sword/Lethality.java
+/Users/ethan/Library/Mobile Documents/com~apple~CloudDocs/Misc/Java/HypixelSkyblock/src/main/java/me/vlink102/hypixelskyblock/enchantments/bow/InfiniteQuiver.java
+/Users/ethan/Library/Mobile Documents/com~apple~CloudDocs/Misc/Java/HypixelSkyblock/src/main/java/me/vlink102/hypixelskyblock/enchantments/fishing/Charm.java
+/Users/ethan/Library/Mobile Documents/com~apple~CloudDocs/Misc/Java/HypixelSkyblock/src/main/java/me/vlink102/hypixelskyblock/enchantments/tools/Pristine.java
+/Users/ethan/Library/Mobile Documents/com~apple~CloudDocs/Misc/Java/HypixelSkyblock/src/main/java/me/vlink102/hypixelskyblock/potions/Regeneration.java
+/Users/ethan/Library/Mobile Documents/com~apple~CloudDocs/Misc/Java/HypixelSkyblock/src/main/java/me/vlink102/hypixelskyblock/potions/Adrenaline.java
+/Users/ethan/Library/Mobile Documents/com~apple~CloudDocs/Misc/Java/HypixelSkyblock/src/main/java/me/vlink102/hypixelskyblock/enchantments/tools/turbo/TurboPumpkin.java
+/Users/ethan/Library/Mobile Documents/com~apple~CloudDocs/Misc/Java/HypixelSkyblock/src/main/java/me/vlink102/hypixelskyblock/enchantments/sword/ThunderBolt.java
+/Users/ethan/Library/Mobile Documents/com~apple~CloudDocs/Misc/Java/HypixelSkyblock/src/main/java/me/vlink102/hypixelskyblock/enchantments/chestplate/Reflection.java
+/Users/ethan/Library/Mobile Documents/com~apple~CloudDocs/Misc/Java/HypixelSkyblock/src/main/java/me/vlink102/hypixelskyblock/enchantments/bow/Power.java
+/Users/ethan/Library/Mobile Documents/com~apple~CloudDocs/Misc/Java/HypixelSkyblock/src/main/java/me/vlink102/hypixelskyblock/enchantments/sword/TitanKiller.java
+/Users/ethan/Library/Mobile Documents/com~apple~CloudDocs/Misc/Java/HypixelSkyblock/src/main/java/me/vlink102/hypixelskyblock/enchantments/ultimate/Legion.java
+/Users/ethan/Library/Mobile Documents/com~apple~CloudDocs/Misc/Java/HypixelSkyblock/src/main/java/me/vlink102/hypixelskyblock/enchantments/ultimate/HabaneroTactics.java
+/Users/ethan/Library/Mobile Documents/com~apple~CloudDocs/Misc/Java/HypixelSkyblock/src/main/java/me/vlink102/hypixelskyblock/potions/xpboost/ForagingXPBoost.java
+/Users/ethan/Library/Mobile Documents/com~apple~CloudDocs/Misc/Java/HypixelSkyblock/src/main/java/me/vlink102/hypixelskyblock/enchantments/sword/Cleave.java
+/Users/ethan/Library/Mobile Documents/com~apple~CloudDocs/Misc/Java/HypixelSkyblock/src/main/java/me/vlink102/hypixelskyblock/potions/Knockback.java
+/Users/ethan/Library/Mobile Documents/com~apple~CloudDocs/Misc/Java/HypixelSkyblock/src/main/java/me/vlink102/hypixelskyblock/enchantments/sword/FireAspect.java
+/Users/ethan/Library/Mobile Documents/com~apple~CloudDocs/Misc/Java/HypixelSkyblock/src/main/java/me/vlink102/hypixelskyblock/enchantments/sword/Vampirism.java
+/Users/ethan/Library/Mobile Documents/com~apple~CloudDocs/Misc/Java/HypixelSkyblock/src/main/java/me/vlink102/hypixelskyblock/potions/xpboost/FishingXPBoost.java
+/Users/ethan/Library/Mobile Documents/com~apple~CloudDocs/Misc/Java/HypixelSkyblock/src/main/java/me/vlink102/hypixelskyblock/enchantments/boots/DepthStrider.java
+/Users/ethan/Library/Mobile Documents/com~apple~CloudDocs/Misc/Java/HypixelSkyblock/src/main/java/me/vlink102/hypixelskyblock/potions/dungeon/DungeonVI.java
+/Users/ethan/Library/Mobile Documents/com~apple~CloudDocs/Misc/Java/HypixelSkyblock/src/main/java/me/vlink102/hypixelskyblock/potions/Speed.java
+/Users/ethan/Library/Mobile Documents/com~apple~CloudDocs/Misc/Java/HypixelSkyblock/src/main/java/me/vlink102/hypixelskyblock/enchantments/sword/Champion.java
+/Users/ethan/Library/Mobile Documents/com~apple~CloudDocs/Misc/Java/HypixelSkyblock/src/main/java/me/vlink102/hypixelskyblock/enchantments/bow/Piercing.java
+/Users/ethan/Library/Mobile Documents/com~apple~CloudDocs/Misc/Java/HypixelSkyblock/src/main/java/me/vlink102/hypixelskyblock/potions/Blindness.java
+/Users/ethan/Library/Mobile Documents/com~apple~CloudDocs/Misc/Java/HypixelSkyblock/src/main/java/me/vlink102/hypixelskyblock/enchantments/HardenedMana.java
+/Users/ethan/Library/Mobile Documents/com~apple~CloudDocs/Misc/Java/HypixelSkyblock/src/main/java/me/vlink102/hypixelskyblock/enchantments/ultimate/TheOne.java
+/Users/ethan/Library/Mobile Documents/com~apple~CloudDocs/Misc/Java/HypixelSkyblock/src/main/java/me/vlink102/hypixelskyblock/enchantments/fishing/Expertise.java
+/Users/ethan/Library/Mobile Documents/com~apple~CloudDocs/Misc/Java/HypixelSkyblock/src/main/java/me/vlink102/hypixelskyblock/enchantments/fishing/Blessing.java
+/Users/ethan/Library/Mobile Documents/com~apple~CloudDocs/Misc/Java/HypixelSkyblock/src/main/java/me/vlink102/hypixelskyblock/enchantments/ultimate/SoulEater.java
+/Users/ethan/Library/Mobile Documents/com~apple~CloudDocs/Misc/Java/HypixelSkyblock/src/main/java/me/vlink102/hypixelskyblock/enchantments/ultimate/UltimateWise.java
+/Users/ethan/Library/Mobile Documents/com~apple~CloudDocs/Misc/Java/HypixelSkyblock/src/main/java/me/vlink102/hypixelskyblock/enchantments/equipment/Prosperity.java
+/Users/ethan/Library/Mobile Documents/com~apple~CloudDocs/Misc/Java/HypixelSkyblock/src/main/java/me/vlink102/hypixelskyblock/enchantments/bow/Overload.java
+/Users/ethan/Library/Mobile Documents/com~apple~CloudDocs/Misc/Java/HypixelSkyblock/src/main/java/me/vlink102/hypixelskyblock/enchantments/tools/Harvesting.java
+/Users/ethan/Library/Mobile Documents/com~apple~CloudDocs/Misc/Java/HypixelSkyblock/src/main/java/me/vlink102/hypixelskyblock/enchantments/DragonHunter.java
+/Users/ethan/Library/Mobile Documents/com~apple~CloudDocs/Misc/Java/HypixelSkyblock/src/main/java/me/vlink102/hypixelskyblock/potions/MushedGlowyTonic.java
+/Users/ethan/Library/Mobile Documents/com~apple~CloudDocs/Misc/Java/HypixelSkyblock/src/main/java/me/vlink102/hypixelskyblock/enchantments/ultimate/Inferno.java
+/Users/ethan/Library/Mobile Documents/com~apple~CloudDocs/Misc/Java/HypixelSkyblock/src/main/java/me/vlink102/hypixelskyblock/enchantments/ultimate/Combo.java
+/Users/ethan/Library/Mobile Documents/com~apple~CloudDocs/Misc/Java/HypixelSkyblock/src/main/java/me/vlink102/hypixelskyblock/potions/NightVision.java
+/Users/ethan/Library/Mobile Documents/com~apple~CloudDocs/Misc/Java/HypixelSkyblock/src/main/java/me/vlink102/hypixelskyblock/potions/Agility.java
+/Users/ethan/Library/Mobile Documents/com~apple~CloudDocs/Misc/Java/HypixelSkyblock/src/main/java/me/vlink102/hypixelskyblock/enchantments/chestplate/TrueProtection.java
+/Users/ethan/Library/Mobile Documents/com~apple~CloudDocs/Misc/Java/HypixelSkyblock/src/main/java/me/vlink102/hypixelskyblock/potions/Damage.java
+/Users/ethan/Library/Mobile Documents/com~apple~CloudDocs/Misc/Java/HypixelSkyblock/src/main/java/me/vlink102/hypixelskyblock/enchantments/helmet/Hecatomb.java
+/Users/ethan/Library/Mobile Documents/com~apple~CloudDocs/Misc/Java/HypixelSkyblock/src/main/java/me/vlink102/hypixelskyblock/enchantments/ultimate/NoPainNoGain.java
+/Users/ethan/Library/Mobile Documents/com~apple~CloudDocs/Misc/Java/HypixelSkyblock/src/main/java/me/vlink102/hypixelskyblock/potions/dungeon/DungeonII.java
+/Users/ethan/Library/Mobile Documents/com~apple~CloudDocs/Misc/Java/HypixelSkyblock/src/main/java/me/vlink102/hypixelskyblock/enchantments/Looting.java
+/Users/ethan/Library/Mobile Documents/com~apple~CloudDocs/Misc/Java/HypixelSkyblock/src/main/java/me/vlink102/hypixelskyblock/enchantments/Protection.java
+/Users/ethan/Library/Mobile Documents/com~apple~CloudDocs/Misc/Java/HypixelSkyblock/src/main/java/me/vlink102/hypixelskyblock/enchantments/fishing/Frail.java
+/Users/ethan/Library/Mobile Documents/com~apple~CloudDocs/Misc/Java/HypixelSkyblock/src/main/java/me/vlink102/hypixelskyblock/enchantments/boots/FrostWalker.java
+/Users/ethan/Library/Mobile Documents/com~apple~CloudDocs/Misc/Java/HypixelSkyblock/src/main/java/me/vlink102/hypixelskyblock/enchantments/bow/Punch.java
+/Users/ethan/Library/Mobile Documents/com~apple~CloudDocs/Misc/Java/HypixelSkyblock/src/main/java/me/vlink102/hypixelskyblock/potions/WispsIceFlavoredWater.java
+/Users/ethan/Library/Mobile Documents/com~apple~CloudDocs/Misc/Java/HypixelSkyblock/src/main/java/me/vlink102/hypixelskyblock/enchantments/bow/Chance.java
+/Users/ethan/Library/Mobile Documents/com~apple~CloudDocs/Misc/Java/HypixelSkyblock/src/main/java/me/vlink102/hypixelskyblock/enchantments/SBUltimate.java
+/Users/ethan/Library/Mobile Documents/com~apple~CloudDocs/Misc/Java/HypixelSkyblock/src/main/java/me/vlink102/hypixelskyblock/enchantments/bow/DragonTracer.java
+/Users/ethan/Library/Mobile Documents/com~apple~CloudDocs/Misc/Java/HypixelSkyblock/src/main/java/me/vlink102/hypixelskyblock/potions/dungeon/DungeonI.java
+/Users/ethan/Library/Mobile Documents/com~apple~CloudDocs/Misc/Java/HypixelSkyblock/src/main/java/me/vlink102/hypixelskyblock/enchantments/BlastProtection.java
+/Users/ethan/Library/Mobile Documents/com~apple~CloudDocs/Misc/Java/HypixelSkyblock/src/main/java/me/vlink102/hypixelskyblock/items/SBItem.java
+/Users/ethan/Library/Mobile Documents/com~apple~CloudDocs/Misc/Java/HypixelSkyblock/src/main/java/me/vlink102/hypixelskyblock/items/weaponsmith/UndeadSword.java
+/Users/ethan/Library/Mobile Documents/com~apple~CloudDocs/Misc/Java/HypixelSkyblock/src/main/java/me/vlink102/hypixelskyblock/enchantments/helmet/AquaAffinity.java
+/Users/ethan/Library/Mobile Documents/com~apple~CloudDocs/Misc/Java/HypixelSkyblock/src/main/java/me/vlink102/hypixelskyblock/enchantments/sword/Scavenger.java
+/Users/ethan/Library/Mobile Documents/com~apple~CloudDocs/Misc/Java/HypixelSkyblock/src/main/java/me/vlink102/hypixelskyblock/enchantments/fishing/Magnet.java
+/Users/ethan/Library/Mobile Documents/com~apple~CloudDocs/Misc/Java/HypixelSkyblock/src/main/java/me/vlink102/hypixelskyblock/enchantments/tools/SmeltingTouch.java
+/Users/ethan/Library/Mobile Documents/com~apple~CloudDocs/Misc/Java/HypixelSkyblock/src/main/java/me/vlink102/hypixelskyblock/potions/Archery.java
+/Users/ethan/Library/Mobile Documents/com~apple~CloudDocs/Misc/Java/HypixelSkyblock/src/main/java/me/vlink102/hypixelskyblock/potions/Venomous.java
+/Users/ethan/Library/Mobile Documents/com~apple~CloudDocs/Misc/Java/HypixelSkyblock/src/main/java/me/vlink102/hypixelskyblock/potions/Experience.java
+/Users/ethan/Library/Mobile Documents/com~apple~CloudDocs/Misc/Java/HypixelSkyblock/src/main/java/me/vlink102/hypixelskyblock/enchantments/sword/EnderSlayer.java
+/Users/ethan/Library/Mobile Documents/com~apple~CloudDocs/Misc/Java/HypixelSkyblock/src/main/java/me/vlink102/hypixelskyblock/enchantments/sword/Knockback.java
+/Users/ethan/Library/Mobile Documents/com~apple~CloudDocs/Misc/Java/HypixelSkyblock/src/main/java/me/vlink102/hypixelskyblock/enchantments/Tabasco.java
+/Users/ethan/Library/Mobile Documents/com~apple~CloudDocs/Misc/Java/HypixelSkyblock/src/main/java/me/vlink102/hypixelskyblock/enchantments/tools/Replenish.java
+/Users/ethan/Library/Mobile Documents/com~apple~CloudDocs/Misc/Java/HypixelSkyblock/src/main/java/me/vlink102/hypixelskyblock/enchantments/ultimate/Wisdom.java
+/Users/ethan/Library/Mobile Documents/com~apple~CloudDocs/Misc/Java/HypixelSkyblock/src/main/java/me/vlink102/hypixelskyblock/potions/WaterBreathing.java
+/Users/ethan/Library/Mobile Documents/com~apple~CloudDocs/Misc/Java/HypixelSkyblock/src/main/java/me/vlink102/hypixelskyblock/potions/Mana.java
+/Users/ethan/Library/Mobile Documents/com~apple~CloudDocs/Misc/Java/HypixelSkyblock/src/main/java/me/vlink102/hypixelskyblock/potions/dungeon/DungeonIV.java
+/Users/ethan/Library/Mobile Documents/com~apple~CloudDocs/Misc/Java/HypixelSkyblock/src/main/java/me/vlink102/hypixelskyblock/potions/xpboost/FarmingXPBoost.java
+/Users/ethan/Library/Mobile Documents/com~apple~CloudDocs/Misc/Java/HypixelSkyblock/src/main/java/me/vlink102/hypixelskyblock/gui/Anvil.java
+/Users/ethan/Library/Mobile Documents/com~apple~CloudDocs/Misc/Java/HypixelSkyblock/src/main/java/me/vlink102/hypixelskyblock/HypixelSkyblock.java
+/Users/ethan/Library/Mobile Documents/com~apple~CloudDocs/Misc/Java/HypixelSkyblock/src/main/java/me/vlink102/hypixelskyblock/potions/xpboost/CombatXPBoost.java
+/Users/ethan/Library/Mobile Documents/com~apple~CloudDocs/Misc/Java/HypixelSkyblock/src/main/java/me/vlink102/hypixelskyblock/potions/Absorption.java
+/Users/ethan/Library/Mobile Documents/com~apple~CloudDocs/Misc/Java/HypixelSkyblock/src/main/java/me/vlink102/hypixelskyblock/enchantments/ManaVampire.java
+/Users/ethan/Library/Mobile Documents/com~apple~CloudDocs/Misc/Java/HypixelSkyblock/src/main/java/me/vlink102/hypixelskyblock/enchantments/Rejuvenate.java
+/Users/ethan/Library/Mobile Documents/com~apple~CloudDocs/Misc/Java/HypixelSkyblock/src/main/java/me/vlink102/hypixelskyblock/potions/Poison.java
+/Users/ethan/Library/Mobile Documents/com~apple~CloudDocs/Misc/Java/HypixelSkyblock/src/main/java/me/vlink102/hypixelskyblock/potions/Wounded.java
+/Users/ethan/Library/Mobile Documents/com~apple~CloudDocs/Misc/Java/HypixelSkyblock/src/main/java/me/vlink102/hypixelskyblock/potions/Spelunker.java
+/Users/ethan/Library/Mobile Documents/com~apple~CloudDocs/Misc/Java/HypixelSkyblock/src/main/java/me/vlink102/hypixelskyblock/potions/JumpBoost.java
+/Users/ethan/Library/Mobile Documents/com~apple~CloudDocs/Misc/Java/HypixelSkyblock/src/main/java/me/vlink102/hypixelskyblock/enchantments/Vicious.java
+/Users/ethan/Library/Mobile Documents/com~apple~CloudDocs/Misc/Java/HypixelSkyblock/src/main/java/me/vlink102/hypixelskyblock/potions/xpboost/EnchantingXPBoost.java
+/Users/ethan/Library/Mobile Documents/com~apple~CloudDocs/Misc/Java/HypixelSkyblock/src/main/java/me/vlink102/hypixelskyblock/enchantments/sword/TripleStrike.java
+/Users/ethan/Library/Mobile Documents/com~apple~CloudDocs/Misc/Java/HypixelSkyblock/src/main/java/me/vlink102/hypixelskyblock/enchantments/Growth.java
+/Users/ethan/Library/Mobile Documents/com~apple~CloudDocs/Misc/Java/HypixelSkyblock/src/main/java/me/vlink102/hypixelskyblock/enchantments/ultimate/Duplex.java
+/Users/ethan/Library/Mobile Documents/com~apple~CloudDocs/Misc/Java/HypixelSkyblock/src/main/java/me/vlink102/hypixelskyblock/potions/Healing.java
+/Users/ethan/Library/Mobile Documents/com~apple~CloudDocs/Misc/Java/HypixelSkyblock/src/main/java/me/vlink102/hypixelskyblock/enchantments/fishing/SpikedHook.java
+/Users/ethan/Library/Mobile Documents/com~apple~CloudDocs/Misc/Java/HypixelSkyblock/src/main/java/me/vlink102/hypixelskyblock/potions/Defense.java
+/Users/ethan/Library/Mobile Documents/com~apple~CloudDocs/Misc/Java/HypixelSkyblock/src/main/java/me/vlink102/hypixelskyblock/enchantments/bow/Flame.java
+/Users/ethan/Library/Mobile Documents/com~apple~CloudDocs/Misc/Java/HypixelSkyblock/src/main/java/me/vlink102/hypixelskyblock/enchantments/ultimate/BobbinTime.java
+/Users/ethan/Library/Mobile Documents/com~apple~CloudDocs/Misc/Java/HypixelSkyblock/src/main/java/me/vlink102/hypixelskyblock/potions/dungeon/DungeonV.java
+/Users/ethan/Library/Mobile Documents/com~apple~CloudDocs/Misc/Java/HypixelSkyblock/src/main/java/me/vlink102/hypixelskyblock/enchantments/fishing/Lure.java
+/Users/ethan/Library/Mobile Documents/com~apple~CloudDocs/Misc/Java/HypixelSkyblock/src/main/java/me/vlink102/hypixelskyblock/enchantments/Thorns.java
+/Users/ethan/Library/Mobile Documents/com~apple~CloudDocs/Misc/Java/HypixelSkyblock/src/main/java/me/vlink102/hypixelskyblock/potions/Spirit.java
+/Users/ethan/Library/Mobile Documents/com~apple~CloudDocs/Misc/Java/HypixelSkyblock/src/main/java/me/vlink102/hypixelskyblock/enchantments/tools/turbo/TurboCane.java
+/Users/ethan/Library/Mobile Documents/com~apple~CloudDocs/Misc/Java/HypixelSkyblock/src/main/java/me/vlink102/hypixelskyblock/enchantments/tools/Rainbow.java
+/Users/ethan/Library/Mobile Documents/com~apple~CloudDocs/Misc/Java/HypixelSkyblock/src/main/java/me/vlink102/hypixelskyblock/enchantments/ultimate/Flash.java
+/Users/ethan/Library/Mobile Documents/com~apple~CloudDocs/Misc/Java/HypixelSkyblock/src/main/java/me/vlink102/hypixelskyblock/enchantments/tools/SilkTouch.java
+/Users/ethan/Library/Mobile Documents/com~apple~CloudDocs/Misc/Java/HypixelSkyblock/src/main/java/me/vlink102/hypixelskyblock/enchantments/ultimate/OneForAll.java
+/Users/ethan/Library/Mobile Documents/com~apple~CloudDocs/Misc/Java/HypixelSkyblock/src/main/java/me/vlink102/hypixelskyblock/enchantments/sword/Syphon.java
+/Users/ethan/Library/Mobile Documents/com~apple~CloudDocs/Misc/Java/HypixelSkyblock/src/main/java/me/vlink102/hypixelskyblock/enchantments/FerociousMana.java
+/Users/ethan/Library/Mobile Documents/com~apple~CloudDocs/Misc/Java/HypixelSkyblock/src/main/java/me/vlink102/hypixelskyblock/enchantments/necklace/Quantum.java
+/Users/ethan/Library/Mobile Documents/com~apple~CloudDocs/Misc/Java/HypixelSkyblock/src/main/java/me/vlink102/hypixelskyblock/enchantments/sword/LifeSteal.java
+/Users/ethan/Library/Mobile Documents/com~apple~CloudDocs/Misc/Java/HypixelSkyblock/src/main/java/me/vlink102/hypixelskyblock/potions/FireResistance.java
+/Users/ethan/Library/Mobile Documents/com~apple~CloudDocs/Misc/Java/HypixelSkyblock/src/main/java/me/vlink102/hypixelskyblock/enchantments/fishing/Piscary.java
+/Users/ethan/Library/Mobile Documents/com~apple~CloudDocs/Misc/Java/HypixelSkyblock/src/main/java/me/vlink102/hypixelskyblock/enchantments/sword/Execute.java
+/Users/ethan/Library/Mobile Documents/com~apple~CloudDocs/Misc/Java/HypixelSkyblock/src/main/java/me/vlink102/hypixelskyblock/enchantments/tools/turbo/TurboCocoa.java
+/Users/ethan/Library/Mobile Documents/com~apple~CloudDocs/Misc/Java/HypixelSkyblock/src/main/java/me/vlink102/hypixelskyblock/enchantments/tools/Sunder.java
+/Users/ethan/Library/Mobile Documents/com~apple~CloudDocs/Misc/Java/HypixelSkyblock/src/main/java/me/vlink102/hypixelskyblock/potions/Invisibility.java
+/Users/ethan/Library/Mobile Documents/com~apple~CloudDocs/Misc/Java/HypixelSkyblock/src/main/java/me/vlink102/hypixelskyblock/enchantments/tools/turbo/TurboWheat.java
+/Users/ethan/Library/Mobile Documents/com~apple~CloudDocs/Misc/Java/HypixelSkyblock/src/main/java/me/vlink102/hypixelskyblock/potions/Burning.java
+/Users/ethan/Library/Mobile Documents/com~apple~CloudDocs/Misc/Java/HypixelSkyblock/src/main/java/me/vlink102/hypixelskyblock/enchantments/ultimate/UltimateJerry.java
+/Users/ethan/Library/Mobile Documents/com~apple~CloudDocs/Misc/Java/HypixelSkyblock/src/main/java/me/vlink102/hypixelskyblock/potions/PetLuck.java
+/Users/ethan/Library/Mobile Documents/com~apple~CloudDocs/Misc/Java/HypixelSkyblock/src/main/java/me/vlink102/hypixelskyblock/enchantments/ultimate/Chimera.java
+/Users/ethan/Library/Mobile Documents/com~apple~CloudDocs/Misc/Java/HypixelSkyblock/src/main/java/me/vlink102/hypixelskyblock/player/SBPlayer.java
+/Users/ethan/Library/Mobile Documents/com~apple~CloudDocs/Misc/Java/HypixelSkyblock/src/main/java/me/vlink102/hypixelskyblock/potions/MagicFind.java
+/Users/ethan/Library/Mobile Documents/com~apple~CloudDocs/Misc/Java/HypixelSkyblock/src/main/java/me/vlink102/hypixelskyblock/enchantments/tools/turbo/TurboWart.java
+/Users/ethan/Library/Mobile Documents/com~apple~CloudDocs/Misc/Java/HypixelSkyblock/src/main/java/me/vlink102/hypixelskyblock/enchantments/Respite.java
+/Users/ethan/Library/Mobile Documents/com~apple~CloudDocs/Misc/Java/HypixelSkyblock/src/main/java/me/vlink102/hypixelskyblock/enchantments/Impaling.java
+/Users/ethan/Library/Mobile Documents/com~apple~CloudDocs/Misc/Java/HypixelSkyblock/src/main/java/me/vlink102/hypixelskyblock/potions/dungeon/DungeonIII.java
+/Users/ethan/Library/Mobile Documents/com~apple~CloudDocs/Misc/Java/HypixelSkyblock/src/main/java/me/vlink102/hypixelskyblock/enchantments/sword/Critical.java
+/Users/ethan/Library/Mobile Documents/com~apple~CloudDocs/Misc/Java/HypixelSkyblock/src/main/java/me/vlink102/hypixelskyblock/enchantments/tools/Fortune.java
+/Users/ethan/Library/Mobile Documents/com~apple~CloudDocs/Misc/Java/HypixelSkyblock/src/main/java/me/vlink102/hypixelskyblock/enchantments/StrongMana.java
+/Users/ethan/Library/Mobile Documents/com~apple~CloudDocs/Misc/Java/HypixelSkyblock/src/main/java/me/vlink102/hypixelskyblock/enchantments/bow/Snipe.java
+/Users/ethan/Library/Mobile Documents/com~apple~CloudDocs/Misc/Java/HypixelSkyblock/src/main/java/me/vlink102/hypixelskyblock/potions/Stun.java
+/Users/ethan/Library/Mobile Documents/com~apple~CloudDocs/Misc/Java/HypixelSkyblock/src/main/java/me/vlink102/hypixelskyblock/potions/Strength.java
+/Users/ethan/Library/Mobile Documents/com~apple~CloudDocs/Misc/Java/HypixelSkyblock/src/main/java/me/vlink102/hypixelskyblock/enchantments/tools/Cultivating.java
+/Users/ethan/Library/Mobile Documents/com~apple~CloudDocs/Misc/Java/HypixelSkyblock/src/main/java/me/vlink102/hypixelskyblock/util/SBUtils.java
+/Users/ethan/Library/Mobile Documents/com~apple~CloudDocs/Misc/Java/HypixelSkyblock/src/main/java/me/vlink102/hypixelskyblock/enchantments/sword/Venomous.java
+/Users/ethan/Library/Mobile Documents/com~apple~CloudDocs/Misc/Java/HypixelSkyblock/src/main/java/me/vlink102/hypixelskyblock/enchantments/ultimate/LastStand.java
+/Users/ethan/Library/Mobile Documents/com~apple~CloudDocs/Misc/Java/HypixelSkyblock/src/main/java/me/vlink102/hypixelskyblock/enchantments/DivineGift.java
+/Users/ethan/Library/Mobile Documents/com~apple~CloudDocs/Misc/Java/HypixelSkyblock/src/main/java/me/vlink102/hypixelskyblock/enchantments/sword/ThunderLord.java
+/Users/ethan/Library/Mobile Documents/com~apple~CloudDocs/Misc/Java/HypixelSkyblock/src/main/java/me/vlink102/hypixelskyblock/enchantments/fishing/Caster.java
+/Users/ethan/Library/Mobile Documents/com~apple~CloudDocs/Misc/Java/HypixelSkyblock/src/main/java/me/vlink102/hypixelskyblock/enchantments/sword/Luck.java
+/Users/ethan/Library/Mobile Documents/com~apple~CloudDocs/Misc/Java/HypixelSkyblock/src/main/java/me/vlink102/hypixelskyblock/listeners/Damage.java
+/Users/ethan/Library/Mobile Documents/com~apple~CloudDocs/Misc/Java/HypixelSkyblock/src/main/java/me/vlink102/hypixelskyblock/enchantments/sword/ManaSteal.java
+/Users/ethan/Library/Mobile Documents/com~apple~CloudDocs/Misc/Java/HypixelSkyblock/src/main/java/me/vlink102/hypixelskyblock/potions/Haste.java
+/Users/ethan/Library/Mobile Documents/com~apple~CloudDocs/Misc/Java/HypixelSkyblock/src/main/java/me/vlink102/hypixelskyblock/enchantments/tools/turbo/TurboPotato.java
+/Users/ethan/Library/Mobile Documents/com~apple~CloudDocs/Misc/Java/HypixelSkyblock/src/main/java/me/vlink102/hypixelskyblock/enchantments/boots/FeatherFalling.java
+/Users/ethan/Library/Mobile Documents/com~apple~CloudDocs/Misc/Java/HypixelSkyblock/src/main/java/me/vlink102/hypixelskyblock/util/Statistic.java
+/Users/ethan/Library/Mobile Documents/com~apple~CloudDocs/Misc/Java/HypixelSkyblock/src/main/java/me/vlink102/hypixelskyblock/enchantments/Respiration.java
+/Users/ethan/Library/Mobile Documents/com~apple~CloudDocs/Misc/Java/HypixelSkyblock/src/main/java/me/vlink102/hypixelskyblock/enchantments/helmet/BigBrain.java
+/Users/ethan/Library/Mobile Documents/com~apple~CloudDocs/Misc/Java/HypixelSkyblock/src/main/java/me/vlink102/hypixelskyblock/potions/Dodge.java
+/Users/ethan/Library/Mobile Documents/com~apple~CloudDocs/Misc/Java/HypixelSkyblock/src/main/java/me/vlink102/hypixelskyblock/enchantments/sword/Smite.java
+/Users/ethan/Library/Mobile Documents/com~apple~CloudDocs/Misc/Java/HypixelSkyblock/src/main/java/me/vlink102/hypixelskyblock/enchantments/ultimate/Swarm.java
+/Users/ethan/Library/Mobile Documents/com~apple~CloudDocs/Misc/Java/HypixelSkyblock/src/main/java/me/vlink102/hypixelskyblock/enchantments/ultimate/Bank.java
+/Users/ethan/Library/Mobile Documents/com~apple~CloudDocs/Misc/Java/HypixelSkyblock/src/main/java/me/vlink102/hypixelskyblock/enchantments/Experience.java
+/Users/ethan/Library/Mobile Documents/com~apple~CloudDocs/Misc/Java/HypixelSkyblock/src/main/java/me/vlink102/hypixelskyblock/enchantments/sword/FirstStrike.java
+/Users/ethan/Library/Mobile Documents/com~apple~CloudDocs/Misc/Java/HypixelSkyblock/src/main/java/me/vlink102/hypixelskyblock/enchantments/equipment/GreenThumb.java
+/Users/ethan/Library/Mobile Documents/com~apple~CloudDocs/Misc/Java/HypixelSkyblock/src/main/java/me/vlink102/hypixelskyblock/potions/dungeon/DungeonVII.java
+/Users/ethan/Library/Mobile Documents/com~apple~CloudDocs/Misc/Java/HypixelSkyblock/src/main/java/me/vlink102/hypixelskyblock/player/SBPlayerManager.java
+/Users/ethan/Library/Mobile Documents/com~apple~CloudDocs/Misc/Java/HypixelSkyblock/src/main/java/me/vlink102/hypixelskyblock/potions/SBPotion.java
+/Users/ethan/Library/Mobile Documents/com~apple~CloudDocs/Misc/Java/HypixelSkyblock/src/main/java/me/vlink102/hypixelskyblock/enchantments/Cubism.java
+/Users/ethan/Library/Mobile Documents/com~apple~CloudDocs/Misc/Java/HypixelSkyblock/src/main/java/me/vlink102/hypixelskyblock/enchantments/Smoldering.java
+/Users/ethan/Library/Mobile Documents/com~apple~CloudDocs/Misc/Java/HypixelSkyblock/src/main/java/me/vlink102/hypixelskyblock/enchantments/equipment/Cayenne.java
+/Users/ethan/Library/Mobile Documents/com~apple~CloudDocs/Misc/Java/HypixelSkyblock/src/main/java/me/vlink102/hypixelskyblock/enchantments/ultimate/Rend.java

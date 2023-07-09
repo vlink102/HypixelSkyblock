@@ -15,7 +15,7 @@ public class TrueProtection extends SBEnchantment {
     public final double trueDefenseAdditive = 5;
 
     public Integer[] applyCosts = new Integer[] {36};
-    public Integer[] rarities = new Integer[] {1};
+    
     public int enchantingLevelRequired = 15;
 
     @Override
@@ -26,24 +26,22 @@ public class TrueProtection extends SBEnchantment {
     }
 
     @Override
-    public List<String> getDescription() {
+    public List<String> getFullDescription() {
         List<String> description = new ArrayList<>();
         description.add(ChatColor.translateAlternateColorCodes('&', "&7Grants &f+" + (int) trueDefenseAdditive + "❂ True Defense&7."));
-        description.add("");
+        description.add(ChatColor.translateAlternateColorCodes('&', "&a&c"));
         if (applyCosts[getLevel() - 1] > 0) {
             description.add(ChatColor.translateAlternateColorCodes('&', "&7Apply Cost: &3" + applyCosts[getLevel() - 1] + " Exp Levels"));
             description.add("");
         }
+        description.add(ChatColor.translateAlternateColorCodes('&', "&7Applicable on: " + getAppliedToFancy()));
         description.add(ChatColor.translateAlternateColorCodes('&', "&7Use this on an item in an Anvil"));
         description.add(ChatColor.translateAlternateColorCodes('&', "&7to apply it."));
         
         return description;
     }
 
-    @Override
-    public Integer[] getRarities() {
-        return rarities;
-    }
+    
 
     @Override
     public Integer[] getApplyCosts() {

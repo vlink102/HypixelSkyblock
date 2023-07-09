@@ -3,6 +3,7 @@ package me.vlink102.hypixelskyblock.enchantments.bow;
 import me.vlink102.hypixelskyblock.enchantments.SBEnchantment;
 import me.vlink102.hypixelskyblock.items.SBItem;
 import me.vlink102.hypixelskyblock.player.SBPlayer;
+import me.vlink102.hypixelskyblock.util.SBUtils;
 import me.vlink102.hypixelskyblock.util.Statistic;
 import org.apache.commons.lang.WordUtils;
 import org.bukkit.ChatColor;
@@ -32,7 +33,7 @@ public class Overload extends SBEnchantment {
     }
 
     public Integer[] applyCosts = new Integer[] {45,91,136,179,223};
-    public Integer[] rarities = new Integer[] {1,1,1,1,2};
+    
     public int enchantingLevelRequired = 33;
 
     @Override
@@ -43,30 +44,28 @@ public class Overload extends SBEnchantment {
     }
 
     @Override
-    public List<String> getDescription() {
+    public List<String> getFullDescription() {
         List<String> description = new ArrayList<>();
 
         description.add(ChatColor.translateAlternateColorCodes('&', "&7Increases &9☠ Crit Damage &7by"));
-        description.add(ChatColor.translateAlternateColorCodes('&', "&a" + Statistic.toPercentage((int) getCritDamageModifier()) + "% &7and &9☣ Crit Chance &7by"));
-        description.add(ChatColor.translateAlternateColorCodes('&', "&a" + Statistic.toPercentage((int) getCritChanceModifier()) + "%&7. Having a Critical chance"));
+        description.add(ChatColor.translateAlternateColorCodes('&', "&a" + SBUtils.round(Statistic.toPercentage(getCritDamageModifier())) + "% &7and &9☣ Crit Chance &7by"));
+        description.add(ChatColor.translateAlternateColorCodes('&', "&a" + SBUtils.round(Statistic.toPercentage(getCritChanceModifier())) + "%&7. Having a Critical chance"));
         description.add(ChatColor.translateAlternateColorCodes('&', "&7above &9100% &7grants a chance"));
         description.add(ChatColor.translateAlternateColorCodes('&', "&7to perform a Mega Critical Hit"));
-        description.add(ChatColor.translateAlternateColorCodes('&', "&7dealing &9" + Statistic.toPercentage((int) getMegaCriticalHitModifier()) + "&7 extra damage."));
-        description.add("");
+        description.add(ChatColor.translateAlternateColorCodes('&', "&7dealing &9" + SBUtils.round(Statistic.toPercentage(getMegaCriticalHitModifier())) + "&7 extra damage."));
+        description.add(ChatColor.translateAlternateColorCodes('&', "&a&c"));
         if (applyCosts[getLevel() - 1] > 0) {
             description.add(ChatColor.translateAlternateColorCodes('&', "&7Apply Cost: &3" + applyCosts[getLevel() - 1] + " Exp Levels"));
             description.add("");
         }
+        description.add(ChatColor.translateAlternateColorCodes('&', "&7Applicable on: " + getAppliedToFancy()));
         description.add(ChatColor.translateAlternateColorCodes('&', "&7Use this on an item in an Anvil"));
         description.add(ChatColor.translateAlternateColorCodes('&', "&7to apply it."));
         
         return description;
     }
 
-    @Override
-    public Integer[] getRarities() {
-        return rarities;
-    }
+    
 
     @Override
     public Integer[] getApplyCosts() {

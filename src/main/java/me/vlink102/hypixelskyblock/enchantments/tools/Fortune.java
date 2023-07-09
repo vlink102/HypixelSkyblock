@@ -2,6 +2,7 @@ package me.vlink102.hypixelskyblock.enchantments.tools;
 
 import me.vlink102.hypixelskyblock.enchantments.SBEnchantment;
 import me.vlink102.hypixelskyblock.items.SBItem;
+import me.vlink102.hypixelskyblock.util.SBUtils;
 import org.bukkit.ChatColor;
 
 import java.util.ArrayList;
@@ -21,7 +22,7 @@ public class Fortune extends SBEnchantment {
 
     public Integer[] enchantingTableCosts = new Integer[] {15,30,45};
     public Integer[] applyCosts = new Integer[] {-1,27,41,-1};
-    public Integer[] rarities = new Integer[] {1,1,1,1,2,3,4,5,6,6};
+    
     public int bookshelfPower = 2;
 
     @Override
@@ -32,26 +33,24 @@ public class Fortune extends SBEnchantment {
     }
 
     @Override
-    public List<String> getDescription() {
+    public List<String> getFullDescription() {
         List<String> description = new ArrayList<>();
-        description.add(ChatColor.translateAlternateColorCodes('&', "&7Grants &6+" + getMiningFortuneAdditive() + "☘ Mining Fortune&7,"));
+        description.add(ChatColor.translateAlternateColorCodes('&', "&7Grants &6+" + SBUtils.round(getMiningFortuneAdditive()) + "☘ Mining Fortune&7,"));
         description.add(ChatColor.translateAlternateColorCodes('&', "&7which increases your chance for"));
         description.add(ChatColor.translateAlternateColorCodes('&', "&7multiple drops."));
-        description.add("");
+        description.add(ChatColor.translateAlternateColorCodes('&', "&a&c"));
         if (applyCosts[getLevel() - 1] > 0) {
             description.add(ChatColor.translateAlternateColorCodes('&', "&7Apply Cost: &3" + applyCosts[getLevel() - 1] + " Exp Levels"));
             description.add("");
         }
+        description.add(ChatColor.translateAlternateColorCodes('&', "&7Applicable on: " + getAppliedToFancy()));
         description.add(ChatColor.translateAlternateColorCodes('&', "&7Use this on an item in an Anvil"));
         description.add(ChatColor.translateAlternateColorCodes('&', "&7to apply it."));
         
         return description;
     }
 
-    @Override
-    public Integer[] getRarities() {
-        return rarities;
-    }
+    
 
     @Override
     public Integer[] getApplyCosts() {
