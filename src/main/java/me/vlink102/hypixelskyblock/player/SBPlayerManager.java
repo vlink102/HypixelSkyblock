@@ -264,6 +264,7 @@ public class SBPlayerManager implements Listener {
     public static void manageInventory(SBPlayer player) {
         Player bukkitPlayer = player.getPlayerBind();
         PlayerInventory inventory = bukkitPlayer.getInventory();
+        player.getInventory().clear();
         boolean changeMade = false;
         for (int i = 0; i < 36; i++) {
             ItemStack item = inventory.getContents()[i];
@@ -272,7 +273,9 @@ public class SBPlayerManager implements Listener {
             if (item.getType() == (Material.AIR)) continue;
             NBTItem nbtItem = new NBTItem(item);
             if (!nbtItem.hasTag("rarity")) {
-                inventory.setItem(i, SBItem.fromVanillaItem(item));
+                NBTItem updated = SBItem.fromVanillaItemNBT(item);
+                inventory.setItem(i, updated.getItem());
+                player.getInventory().put(i, SBItem.fromNBTItem(updated));
                 changeMade = true;
             }
         }

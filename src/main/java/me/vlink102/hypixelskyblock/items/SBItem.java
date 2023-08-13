@@ -1,7 +1,10 @@
 package me.vlink102.hypixelskyblock.items;
 
+import de.tr7zw.nbtapi.NBT;
 import de.tr7zw.nbtapi.NBTCompound;
 import de.tr7zw.nbtapi.NBTItem;
+import de.tr7zw.nbtapi.iface.ReadWriteNBT;
+import me.vlink102.hypixelskyblock.HypixelSkyblock;
 import me.vlink102.hypixelskyblock.enchantments.*;
 import me.vlink102.hypixelskyblock.enchantments.boots.DepthStrider;
 import me.vlink102.hypixelskyblock.enchantments.boots.FeatherFalling;
@@ -15,6 +18,7 @@ import me.vlink102.hypixelskyblock.enchantments.sword.*;
 import me.vlink102.hypixelskyblock.enchantments.tools.Efficiency;
 import me.vlink102.hypixelskyblock.enchantments.tools.Fortune;
 import me.vlink102.hypixelskyblock.enchantments.tools.SilkTouch;
+import me.vlink102.hypixelskyblock.gui.Anvil;
 import me.vlink102.hypixelskyblock.util.SBUtils;
 import me.vlink102.hypixelskyblock.util.Statistic;
 import org.apache.commons.lang.WordUtils;
@@ -33,39 +37,49 @@ import java.util.*;
 
 public class SBItem {
     private final String itemID;
-    private final String itemName;
-    private final List<Statistic> baseStats;
-    private final List<SBEnchantment> sbEnchantments;
-    private final boolean stackable;
+    private String itemName;
+    private List<Statistic> baseStats;
+    private List<SBEnchantment> sbEnchantments;
+    private final int maxStackSize;
 
     private final org.bukkit.Material material;
 
+    private String skullTexture;
+
     private ItemRarity rarity;
 
-    private final int hotPotatoBooks;
-    private final int fumingPotatoBooks;
-    private final boolean artOfWar;
-    private final boolean artOfPeace;
+    private int hotPotatoBooks;
+    private int fumingPotatoBooks;
+    private int jalapenoBooks;
+    private boolean artOfWar;
+    private boolean artOfPeace;
 
-    private final boolean recombobulated;
+    private boolean recombobulated;
 
     private final ItemType itemType;
 
     private final boolean reforgable;
     private boolean coopSoulbound;
 
-    public SBItem(String itemID, String itemName, Material material, boolean soulBound, boolean reforgable, boolean stackable, int hpb, int fpb, boolean aow, boolean aop, boolean recomb, ItemType itemType, ItemRarity rarity, List<SBEnchantment> sbEnchantments, Statistic... statistics) {
+    public void registerItem() {
+        HypixelSkyblock.getITEMS().put(this.itemID, this);
+    }
+
+    public SBItem(String itemID, String itemName, String skullTexture, Material material, boolean soulBound, boolean reforgable, int maxStackSize, int hpb, int fpb, int jpb, boolean aow, boolean aop, boolean recomb, ItemType itemType, ItemRarity rarity, List<SBEnchantment> sbEnchantments, Statistic... statistics) {
         this.itemID = itemID;
         this.itemName = itemName;
         this.sbEnchantments = sbEnchantments;
         this.baseStats = Arrays.asList(statistics);
-        this.stackable = stackable;
+        this.maxStackSize = maxStackSize;
         this.material = material;
 
         this.coopSoulbound = soulBound;
 
+        this.skullTexture = skullTexture;
+
         this.hotPotatoBooks = hpb;
         this.fumingPotatoBooks = fpb;
+        this.jalapenoBooks = jpb;
         this.artOfWar = aow;
         this.artOfPeace = aop;
         this.recombobulated = recomb;
@@ -76,6 +90,38 @@ public class SBItem {
         this.itemType = itemType;
 
         // TODO reforges
+    }
+
+    public SBItem(String itemID, String itemName, String skullTexture, Material material, boolean soulBound, boolean reforgable, int maxStackSize, int hpb, int fpb, int jpb, boolean aow, boolean aop, boolean recomb, ItemType itemType, ItemRarity rarity, List<SBEnchantment> sbEnchantments, List<Statistic> statistics) {
+        this.itemID = itemID;
+        this.itemName = itemName;
+        this.sbEnchantments = sbEnchantments;
+        this.baseStats = statistics;
+        this.maxStackSize = maxStackSize;
+        this.material = material;
+
+        this.skullTexture = skullTexture;
+
+        this.coopSoulbound = soulBound;
+
+        this.hotPotatoBooks = hpb;
+        this.fumingPotatoBooks = fpb;
+        this.jalapenoBooks = jpb;
+        this.artOfWar = aow;
+        this.artOfPeace = aop;
+        this.recombobulated = recomb;
+
+        this.reforgable = reforgable;
+
+        this.rarity = rarity;
+        this.itemType = itemType;
+
+        // TODO reforges
+    }
+
+
+    public int getJalapenoBooks() {
+        return jalapenoBooks;
     }
 
     public boolean isCoopSoulbound() {
@@ -96,6 +142,10 @@ public class SBItem {
 
     public boolean isArtOfWar() {
         return artOfWar;
+    }
+
+    public boolean isArtOfPeace() {
+        return artOfPeace;
     }
 
     public boolean isRecombobulated() {
@@ -183,11 +233,131 @@ public class SBItem {
         return material;
     }
 
-    public boolean isStackable() {
-        return stackable;
+    public int getMaxStackSize() {
+        return maxStackSize;
+    }
+
+    public static SBItem fromNBTItem(NBTItem nbtItem) {
+        try {
+            if (!nbtItem.hasTag("rarity")) {
+                return null;
+            }
+            String itemID = nbtItem.getString("item_id");
+
+            NBTCompound display = nbtItem.getCompound("display");
+            String itemName = display.getString("Name");
+            List<String> itemLore = display.getStringList("Lore");
+
+            JSONObject sbEnchantmentsObject = (JSONObject) new JSONParser().parse(nbtItem.getString("sb_enchantments"));
+            List<SBEnchantment> sbEnchantmentList = new ArrayList<>();
+            for (Object o : sbEnchantmentsObject.keySet()) {
+                int enchantID = Integer.parseInt((String) o);
+                Long enchantLevel = (Long) sbEnchantmentsObject.get(o);
+                sbEnchantmentList.add(SBEnchantment.getEnchantByID(enchantID, enchantLevel.intValue()));
+            }
+
+            ItemRarity itemRarity = ItemRarity.getById(nbtItem.getInteger("rarity"));
+
+            String itemType = nbtItem.getString("item_type");
+            ItemType type = itemType.equalsIgnoreCase("") ? null : ItemType.valueOf(itemType);
+
+            boolean recombobulated = nbtItem.getBoolean("recombobulated");
+
+            int hotPotatoBooks = nbtItem.getInteger("hot_potato_books");
+            int fumingPotatoBooks = nbtItem.getInteger("fuming_potato_books");
+            int jalapenoBooks = nbtItem.getInteger("jalapeno_books");
+            boolean artOfWar = nbtItem.getBoolean("art_of_war");
+            boolean artOfPeace = nbtItem.getBoolean("art_of_peace");
+            boolean soulbound = nbtItem.getBoolean("soulbound");
+
+            JSONObject baseStatsObject = (JSONObject) new JSONParser().parse(nbtItem.getString("sb_base_statistics"));
+            List<Statistic> baseStatistics = new ArrayList<>();
+            for (Object o : baseStatsObject.keySet()) {
+                long statisticID = Long.parseLong((String) o);
+                double value = (double) baseStatsObject.get(o);
+                baseStatistics.add(Statistic.Statistics.getByID(statisticID, value));
+            }
+
+            boolean reforgable = nbtItem.getBoolean("reforgable");
+
+            Material itemMaterial = nbtItem.getItem().getType();
+
+            int maxStackSize = nbtItem.getInteger("max_stack");
+
+            return new SBItem(itemID, itemName, null, itemMaterial, soulbound, reforgable, maxStackSize, hotPotatoBooks, fumingPotatoBooks, jalapenoBooks, artOfWar, artOfPeace, recombobulated, type, itemRarity, sbEnchantmentList, baseStatistics);
+
+        } catch (ParseException e) {
+            throw new RuntimeException(e);
+        }
+    }
+
+
+
+    public NBTItem toNBTItem() {
+        ItemStack sbItem;
+        if (material == Material.SKULL_ITEM) {
+            sbItem = new ItemStack(material, 1, (short) 3);
+        } else {
+            sbItem = new ItemStack(material);
+        }
+        ItemMeta metad = sbItem.getItemMeta();
+        metad.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
+        metad.addItemFlags(ItemFlag.HIDE_DESTROYS);
+        metad.addItemFlags(ItemFlag.HIDE_ENCHANTS);
+        metad.addItemFlags(ItemFlag.HIDE_UNBREAKABLE);
+        metad.addItemFlags(ItemFlag.HIDE_PLACED_ON);
+        metad.addItemFlags(ItemFlag.HIDE_POTION_EFFECTS);
+        sbItem.setItemMeta(metad);
+
+        NBTItem item = new NBTItem(sbItem);
+
+        item.setString("sb_enchantments", getJSONEnchants(sbEnchantments));
+        item.setString("item_id", sbItem.getType().toString());
+        int deepRarity = item.getItem().getType() == Material.ENCHANTED_BOOK ? getBookRarity(item).getId() : rarity.getId();
+        item.setInteger("rarity", deepRarity);
+        item.setString("item_type", itemType == null ? "" : itemType.toString());
+        item.setBoolean("recombobulated", recombobulated);
+
+        if (material == Material.SKULL_ITEM && !Objects.equals(skullTexture, "")) {
+            NBT.modify(item.getItem(), nbt -> {
+                final ReadWriteNBT skullOwnerCompound = nbt.getOrCreateCompound("SkullOwner");
+                skullOwnerCompound.setUUID("Id", UUID.randomUUID());
+                skullOwnerCompound.getOrCreateCompound("Properties")
+                        .getCompoundList("textures")
+                        .addCompound()
+                        .setString("Value", skullTexture);
+            });
+        }
+        item.setString("skull_texture", skullTexture);
+
+        item.setInteger("hot_potato_books", hotPotatoBooks);
+        item.setInteger("fuming_potato_books", fumingPotatoBooks);
+        item.setBoolean("art_of_war", artOfWar);
+        item.setBoolean("art_of_peace", artOfPeace);
+
+        item.setBoolean("soulbound", coopSoulbound);
+
+        item.setString("sb_base_statistics", getJSONBaseStatistics(baseStats));
+        item.setBoolean("reforgable", reforgable);
+        item.setInteger("max_stack", maxStackSize);
+        item.setInteger("HideAttributes", 4);
+
+        NBTCompound disp = item.addCompound("display");
+        disp.setString("Name", ChatColor.translateAlternateColorCodes('&', ItemRarity.getById(deepRarity).getColorFull() + itemName));
+        disp.getStringList("Lore").addAll(generateLore(item));
+
+        return item;
+    }
+
+    public ItemStack toItemStack() {
+        return toNBTItem().getItem();
     }
 
     public static ItemStack fromVanillaItem(ItemStack stack) {
+        return fromVanillaItemNBT(stack).getItem();
+    }
+
+    public static NBTItem fromVanillaItemNBT(ItemStack stack) {
         ItemStack sbItem = new ItemStack(stack);
         ItemMeta metad = sbItem.getItemMeta();
         metad.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
@@ -212,6 +382,8 @@ public class SBItem {
                 sbEnchantmentList.add(sbEnchantment);
             }
         }
+
+        item.setString("item_id", stack.getType().toString());
 
         item.setString("sb_enchantments", getJSONEnchants(sbEnchantmentList));
         item.setInteger("rarity", ItemRarity.COMMON.getId());
@@ -370,6 +542,7 @@ public class SBItem {
 
         item.setString("sb_base_statistics", getJSONBaseStatistics(itemStats));
         item.setBoolean("reforgable", item.getString("item_type").matches("BOW|SWORD|FISHING_ROD|HELMET|LEGGINGS|CHESTPLATE|BOOTS|AXE|HOE|PICKAXE|SHOVEL"));
+        item.setInteger("max_stack", item.getItem().getMaxStackSize());
         item.setInteger("HideAttributes", 4);
 
         NBTCompound disp = item.addCompound("display");
@@ -383,15 +556,19 @@ public class SBItem {
         rawName = rawName.replaceAll("Spade", "Shovel");
         rawName = rawName.replaceAll("Barding", "Horse Armor");
         if (sbItem.getType() == Material.ENCHANTED_BOOK) {
-            disp.setString("Name", ChatColor.translateAlternateColorCodes('&', getBookRarity(item).getColorFull() + rawName));
+            ItemRarity newRarity = getBookRarity(item);
+            item.setInteger("rarity", newRarity.getId());
+            disp.setString("Name", ChatColor.translateAlternateColorCodes('&', newRarity.getColorFull() + rawName));
         } else {
             disp.setString("Name", ChatColor.translateAlternateColorCodes('&', ItemRarity.getById(item.getInteger("rarity")).getColorFull() + rawName));
         }
         List<String> l = disp.getStringList("Lore");
         l.addAll(generateLore(item));
 
-        return item.getItem();
+        return item;
     }
+
+
 
     public static final HashMap<Integer, Integer> RARITY_MAP = new HashMap<Integer, Integer>() {{
         this.put(1, ItemRarity.COMMON.id);
@@ -421,7 +598,6 @@ public class SBItem {
             throw new RuntimeException(e);
         }
 
-        nbtItem.setInteger("rarity", tier);
         return ItemRarity.getById(tier);
     }
 
@@ -559,6 +735,8 @@ public class SBItem {
                     } else {
                         lore.addAll(statistic.getBasicDescription());
                     }
+
+                    nbtItem.setInteger("apply_cost", statistic.getApplyCost());
                 }
             } else if (size <= 5) {
                 double combinedLevel = 0;
@@ -578,6 +756,8 @@ public class SBItem {
                     lore.add("");
                     lore.add(ChatColor.translateAlternateColorCodes('&', "&7Use this on an item in an Anvil"));
                     lore.add(ChatColor.translateAlternateColorCodes('&', "&7to apply it."));
+
+                    nbtItem.setInteger("apply_cost", Double.valueOf(combinedLevel).intValue());
                 }
             } else if (size <= 9) {
                 double combinedLevel = 0;
@@ -594,6 +774,8 @@ public class SBItem {
                     lore.add("");
                     lore.add(ChatColor.translateAlternateColorCodes('&', "&7Use this on an item in an Anvil"));
                     lore.add(ChatColor.translateAlternateColorCodes('&', "&7to apply it."));
+
+                    nbtItem.setInteger("apply_cost", Double.valueOf(combinedLevel).intValue());
                 }
             } else {
                 double combinedLevel = 0;
@@ -629,6 +811,8 @@ public class SBItem {
                     lore.add("");
                     lore.add(ChatColor.translateAlternateColorCodes('&', "&7Use this on an item in an Anvil"));
                     lore.add(ChatColor.translateAlternateColorCodes('&', "&7to apply it."));
+
+                    nbtItem.setInteger("apply_cost", Double.valueOf(combinedLevel).intValue());
                 }
             }
 
@@ -744,11 +928,80 @@ public class SBItem {
         return baseStats;
     }
 
+    public boolean containsStatistic(Statistic.Statistics statistic) {
+        for (Statistic baseStat : getBaseStats()) {
+            if (statistic.getStatistic(0).getStatisticID() == baseStat.getStatisticID()) {
+                return true;
+            }
+        }
+        return false;
+    }
+
+    public Statistic getStatistic(Statistic.Statistics statistics) {
+        for (Statistic baseStat : getBaseStats()) {
+            if (statistics.getStatistic(0).getStatisticID() == baseStat.getStatisticID()) {
+                return baseStat;
+            }
+        }
+        return null;
+    }
+
     public String getItemID() {
         return itemID;
     }
 
+    public ItemType getItemType() {
+        return itemType;
+    }
+
     public String getItemName() {
         return itemName;
+    }
+
+    public void addHotPotatoBook() {
+        addPotatoBookStat();
+        hotPotatoBooks ++;
+    }
+
+    public void addPotatoBookStat() {
+        SBItem.ItemType type = itemType;
+        if (type == SBItem.ItemType.HELMET ||
+                type == SBItem.ItemType.CHESTPLATE ||
+                type == SBItem.ItemType.LEGGINGS ||
+                type == SBItem.ItemType.BOOTS) {
+            Anvil.initOrAddStatistic(this, Statistic.Statistics.HEALTH, 4);
+            Anvil.initOrAddStatistic(this, Statistic.Statistics.DEFENSE, 2);
+        } else {
+            Anvil.initOrAddStatistic(this, Statistic.Statistics.DAMAGE, 2);
+            Anvil.initOrAddStatistic(this, Statistic.Statistics.STRENGTH, 2);
+        }
+    }
+
+    public void addFumingPotatoBooks() {
+        addPotatoBookStat();
+        fumingPotatoBooks ++;
+    }
+
+    public void addJalapenoBooks() {
+        jalapenoBooks ++;
+    }
+
+    public void recombobulate() {
+        recombobulated = true;
+        rarity = ItemRarity.getById(rarity.id + 1);
+    }
+
+    public void setArtOfPeace() {
+        this.artOfPeace = true;
+        Anvil.initOrAddStatistic(this, Statistic.Statistics.HEALTH, 40);
+    }
+
+    public void setArtOfWar() {
+        this.artOfWar = true;
+        Anvil.initOrAddStatistic(this, Statistic.Statistics.STRENGTH, 5);
+    }
+
+    public void setSbEnchantments(List<SBEnchantment> sbEnchantments) {
+        this.sbEnchantments = sbEnchantments;
     }
 }

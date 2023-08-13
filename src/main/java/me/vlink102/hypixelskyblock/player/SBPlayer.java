@@ -7,6 +7,7 @@ import me.vlink102.hypixelskyblock.util.Statistic;
 import org.bukkit.entity.Player;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
 
 public class SBPlayer {
@@ -60,12 +61,12 @@ public class SBPlayer {
     @Getter private final Statistic.PlayerStatistic mana;
     @Getter private final Statistic.PlayerStatistic health;
 
-    @Getter private final List<SBItem> inventory;
+    @Getter private final HashMap<Integer, SBItem> inventory;
 
     public SBPlayer(Player playerBind) {
         this.playerBind = playerBind;
 
-        this.inventory = new ArrayList<>();
+        this.inventory = new HashMap<>();
 
         this.maxHealth = Statistic.Statistics.MAX_HEALTH.getPlayerStatistic();
         this.defense = Statistic.Statistics.DEFENSE.getPlayerStatistic();

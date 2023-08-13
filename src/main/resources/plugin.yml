@@ -5,3 +5,27 @@ commands:
   sb:
     description: Skyblock commands
     usage: /sb <args>
+    aliases:
+      - skyblock
+      - hpsb
+  sbenchant:
+    description: Enchant command
+    usage: /sbenchant <args>
+    aliases:
+      - sbe
+      - sbench
+      - ench
+      - enchantsb
+      - e
+      - skyblockenchant
+  sbget:
+    description: Get item command
+    usage: /sbget <args>
+    aliases:
+      - sbg
+      - sbgetitem
+      - getitem
+      - sbitem
+      - sbi
+      - itemsb
+      - i

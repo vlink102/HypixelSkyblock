@@ -1,5 +1,6 @@
 package me.vlink102.hypixelskyblock.enchantments;
 
+import me.vlink102.hypixelskyblock.HypixelSkyblock;
 import me.vlink102.hypixelskyblock.items.SBItem;
 import org.apache.commons.lang.WordUtils;
 import org.bukkit.ChatColor;
@@ -14,7 +15,10 @@ public class SBEnchantment {
 
     private final List<Long> conflictingEnchantments;
 
-    private static final HashMap<Long, SBEnchantment> ENCHANTMENTS = new HashMap<>();
+    @Override
+    public String toString() {
+        return "SBEnchantment{ID=" + ID + ", displayName=" + displayName + ", level=" + level + "}";
+    }
 
     public String getAppliedToFancy() {
         List<SBItem.ItemType> applied = new ArrayList<>(appliedTo());
@@ -162,11 +166,7 @@ public class SBEnchantment {
         this.level = level;
         this.conflictingEnchantments = Arrays.asList(conflictingEnchantments);
 
-        ENCHANTMENTS.put(ID, this);
-    }
-
-    public static HashMap<Long, SBEnchantment> getENCHANTMENTS() {
-        return ENCHANTMENTS;
+        HypixelSkyblock.getENCHANTMENTS().put(ID, this);
     }
 
     public List<SBItem.ItemType> appliedTo() {
@@ -174,7 +174,7 @@ public class SBEnchantment {
     }
 
     public static SBEnchantment getEnchantByID(long id, int level) {
-        SBEnchantment enchantment = ENCHANTMENTS.get(id);
+        SBEnchantment enchantment = HypixelSkyblock.getENCHANTMENTS().get(id);
         enchantment.setLevel(level);
         return enchantment;
     }

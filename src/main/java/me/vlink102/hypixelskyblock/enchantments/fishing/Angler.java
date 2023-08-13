@@ -16,7 +16,6 @@ public class Angler extends SBEnchantment {
 
     /**
      * Enchantment level * 0.01 (1% per level)
-     * @return
      */
     public double getSeaCreatureChanceModifier() {
         return getLevel() * Statistic.fromPercentage(1);

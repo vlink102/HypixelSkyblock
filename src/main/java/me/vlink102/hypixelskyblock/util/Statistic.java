@@ -123,6 +123,10 @@ public class Statistic {
         }
     }
 
+    public void addValue(double value) {
+        this.value += value;
+    }
+
     public enum Statistics {
         MAX_HEALTH(new Statistic(1, StatisticType.VALUE, 100, "a", "Health")),
         DEFENSE(new Statistic(2, Statistic.StatisticType.VALUE, 0, "a", "Defense")),
@@ -189,7 +193,7 @@ public class Statistic {
             return stat;
         }
 
-        public static Statistic getByID(int id, double val) {
+        public static Statistic getByID(long id, double val) {
             for (Statistics value : values()) {
                 if (id == value.statistic.statisticID) {
                     return value.getStatistic(val);

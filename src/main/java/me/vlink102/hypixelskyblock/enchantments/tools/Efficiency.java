@@ -24,7 +24,12 @@ public class Efficiency extends SBEnchantment {
     @Override
     public List<SBItem.ItemType> appliedTo() {
         List<SBItem.ItemType> itemTypes = new ArrayList<>();
-        itemTypes.add(SBItem.ItemType.HELMET);
+        itemTypes.add(SBItem.ItemType.PICKAXE);
+        itemTypes.add(SBItem.ItemType.DRILL);
+        itemTypes.add(SBItem.ItemType.HOE);
+        itemTypes.add(SBItem.ItemType.AXE);
+        itemTypes.add(SBItem.ItemType.SHOVEL);
+        itemTypes.add(SBItem.ItemType.SHEARS);
         return itemTypes;
     }
 
